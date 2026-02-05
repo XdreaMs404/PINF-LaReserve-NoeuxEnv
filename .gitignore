@@ -1,0 +1,11 @@
+.env
+.env.local
+storage/*.log
+public/uploads/*
+!public/uploads/.gitkeep
+.vscode/
+.idea/
+vendor/
+node_modules/
+*.swp
+.DS_Store

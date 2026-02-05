@@ -1,0 +1,429 @@
+Page d'acceuil :
+- mettre une image en hero (mettre @acceuil_locaux.jpeg), enlève cette phrase "On vient à La Réserve pour découvrir, apprendre, échanger… et passer un bon moment.", enlève aussi le bouton "On vient à La Réserve pour découvrir, apprendre, échanger… et passer un bon moment.", enlève aussi le bouton "Venir nous voir", recadre donc les deux boutons restants et mets les avec le même style (celui de "Découvrir la Réserve" avec le fond marron claire et écriture en blanc)
+- mettre plus d'espaces avec le bord (pour tout le texte que ce soit le titre ou le texte) pour tout le contenu par exemple la section "La Réserve en quelques chiffres", mais le reste aussi, pour toutes les pages.
+- faire une page Visites & Animations pour le relier au bouton "Visites & Animations dans la page d'accueil
+- mettre la photo @avant_après.webp à la section La Réserve en quelques chiffres
+pour la photo du plan de la réserve.
+- Bouton "Voir tout l'agenda" doit mener à une page l'agenda que l'on doit créer qui est similaire à celle du site noeux environnement.
+- changer le footer pour le même que celui du site noeux environnement mais en adapté / avec les informations de la réserve.
+
+Page Découvrir :
+- pour la section D’une friche commerciale à un écolieu vivant, utilise la photo @acceuil_locaux.jpeg
+- mettre une image pour la section Un tiers-lieu nourricier et social, donc centré à gauche le texte de cette section, et mettre à droite l'image @plan_vue_de_haut_locaux.jpg
+- mettre des images des partenaires (voir les 4 images dans le dossier @partenaires) et mettre en plus de ces 4 images le logo de noeux environnement (au milieu des 4 de préférence), à la fin en dessous de la section "Un projet collectif".
+- Enlever la section "Ce qui se vit à La Réserve"
+
+Page En pratique :
+- mettre une image pour la sectionSurfaces et aménagements, donc centré à gauche le texte de cette section, et mettre à droite l'image @interieur_bois_maquette_locaux.webp
+- mettre image @travaux_ouvrier.jpg pour la section Le bâtiment : un démonstrateur de rénovation frugale.
+
+Page Jardins :
+- mettre photo @interieur_bois_maquette_locaux.jpg pour la section Qui cultive les jardins ?
+- mettre image @visite_jardin.jpg pour la section Des jardins pour apprendre.
+- Supprimer la section "Apprendre un métier dans les jardins".
+- pour la section "Visites et ateliers dans les jardins", ne le mets pas sur un fond blanc rectangulaire mais sur le site de base, son fond de base (comme celui que l'on va supprimer étant la section "Apprendre un métier dans les jardins", et laisse le texte et ses positions comme elles sont);
+- le bouton organiser une visite de groupe, va ramener sur
+
+page Bâtiment :
+totalement la refaire pour l'adapter en une page étant
+
+
+- relier les boutons aux pages (organiser une visite technique à “Visites & animations”, voir les prochaines visites ramènent à une page Agenda dans le même style que celle sur le site de Noeux Environnement, Organiser une visite de groupe “Visites & animations”)
+
+Faire les pages manquantes :
+- changer page bâtiment par :
+3. Page “Réserver une salle” (adaptation de “Bâtiment & salles”)
+
+Ici, on enlève tout le bla-bla général sur le bâtiment, et on fait une page orientée “location / mise à disposition des salles”.
+
+H1
+
+Réserver une salle à La Réserve
+
+Bandeau d’intro
+
+La Réserve dispose de plusieurs salles et espaces qui peuvent accueillir vos réunions, ateliers, formations ou journées d’équipe.
+
+Nous mettons ces espaces à disposition des associations, collectivités, structures sociales, organismes de formation et entreprises, dans la mesure des disponibilités du lieu.
+
+Bouton :
+
+Faire une demande de réservation → page Contact & demandes, sujet = “Réservation de salle / événement”
+
+Section 1 – Les salles disponibles
+
+Titre (H2)
+
+Les espaces à votre disposition
+
+Tu pourras adapter le nombre exact de salles. Exemple à 3 salles :
+
+Salle 1 – Grande salle polyvalente
+
+Capacité : ~40 à 80 personnes selon la configuration
+
+Usages : conférences, temps pléniers, ateliers participatifs, projections, événements publics
+
+Équipement : chaises, tables modulables, vidéoprojecteur/écran, paperboard, sonorisation légère si besoin
+
+Salle 2 – Salle de réunion
+
+Capacité : ~10 à 20 personnes
+
+Usages : réunions de travail, groupes-projets, comités de pilotage, petites formations
+
+Équipement : table centrale ou tables en U, écran / TV / vidéoprojecteur, paperboard
+
+Salle 3 – Espace atelier / convivialité
+
+Capacité : variable suivant l’usage
+
+Usages : ateliers pratiques (bricolage nature, cuisine, co-conception), temps conviviaux
+
+Équipement : plans de travail, rangements, éventuellement cuisine partagée (à confirmer)
+
+Petit texte sous la liste :
+
+Lors de votre demande, nous vous aidons à choisir la salle la plus adaptée à votre événement.
+
+Section 2 – Idées d’usages
+
+Titre (H2)
+
+Pour quels types de projets ?
+
+Texte :
+
+Les salles de La Réserve peuvent accueillir par exemple :
+– des réunions d’équipe ou de coordination,
+– des journées de formation ou de sensibilisation à la transition,
+– des journées d’étude ou séminaires avec temps en salle + visite du site,
+– des ateliers participatifs avec des habitants ou des partenaires,
+– des événements associatifs (AG, rencontres, temps conviviaux)
+– des séminaires d’entreprise autour de la RSE, du climat, de la biodiversité…
+
+Encadré :
+
+Si vous le souhaitez, nous pouvons aussi vous proposer :
+– une visite guidée du site,
+– un atelier nature, jardin ou alimentation animé par Nœux Environnement,
+en complément de votre temps en salle.
+
+Section 3 – Comment réserver une salle ?
+
+Titre (H2)
+
+Comment réserver une salle ?
+
+Trois étapes, en intégrant le paiement via Trello.
+
+Étape 1 – Faire une demande
+
+Vous remplissez le formulaire de la page Contact & demandes, en choisissant le sujet “Réservation de salle / événement”.
+
+Merci de préciser :
+– votre structure (association, collectivité, entreprise…),
+– le type d’événement,
+– le nombre de participant·es,
+– la date ou la période souhaitée,
+– la salle pressentie (si vous en avez une) ou le type de salle,
+– vos besoins particuliers (visite, atelier, matériel, repas…).
+
+Étape 2 – Validation et confirmation
+
+L’équipe de La Réserve vous répond pour :
+– vérifier les disponibilités,
+– ajuster la configuration de salle,
+– préciser les conditions de mise à disposition (horaires, clé, ménage, etc.),
+– vous communiquer un tarif ou les conditions de participation (sur devis si besoin).
+
+Si tout est OK, nous vous envoyons un récapitulatif par mail.
+
+Étape 3 – Règlement via Trello
+
+Pour finaliser la réservation, vous recevez un lien externe Trello :
+– ce lien vous permet d’accéder à une carte dédiée à votre réservation,
+– vous pourrez y effectuer le paiement en ligne selon les modalités convenues (CB, etc.),
+– une fois le paiement validé, la réservation de la salle est définitivement confirmée.
+
+Vous recevez alors une confirmation par mail, avec toutes les informations pratiques (adresse, horaires, accès, contact sur place…).
+
+🔒 Précise dans ta maquette : “Le paiement est géré via Trello sur un espace sécurisé externe. Aucune donnée bancaire n’est stockée sur le site de La Réserve.”
+
+Section 4 – Infos pratiques
+
+Titre (H2)
+
+Quelques informations pratiques
+
+Liste :
+
+Horaires : les salles sont en général disponibles en journée (et parfois en soirée selon les possibilités), à convenir ensemble.
+
+Accès : La Réserve – 22 bis rue Nationale, 62290 Nœux-les-Mines (parking à proximité, accès transport à préciser).
+
+Matériel : vérifiez avec nous ce qui est disponible (vidéoprojecteur, son, paperboard…) et ce que vous devez apporter.
+
+Ménage & rangement : la salle doit être rendue dans un état conforme à celui d’arrivée (à détailler dans les conditions au moment de la réservation).
+
+CTA :
+
+🎟️ Vous souhaitez réserver une salle ?
+→ Bouton “Faire une demande de réservation” → page Contact & demandes (sujet pré-rempli).
+
+Puis, recréer une page agenda, reprend le fichier @agenda.html de noeux environnement, laisse les mêmes images, le même texte, adapte juste la couleur (variantes marron et blanc) pour être en accord avec le site de la réserve.
+
+Ensuite, voici les autres pages à créer :
+2. Page “Visites & animations”
+
+On garde une page dédiée : c’est là que tu expliques ce que vous proposez, et ensuite tous les formulaires partent depuis la page Contact.
+
+H1
+
+Visites & animations
+
+Bandeau d’intro
+
+La Réserve est un lieu qui se visite et qui se vit.
+
+Nous accueillons toute l’année :
+– des visites guidées du site (bâtiment, jardins, maraîchage),
+– des animations nature et jardin,
+– des ateliers autour de l’alimentation,
+– des journées professionnelles et techniques.
+
+Que vous soyez habitants, enseignants, animateurs, association, entreprise ou collectivité, nous pouvons construire avec vous une visite ou une animation adaptée.
+
+Boutons sous le bandeau :
+
+Voir les prochains événements → page Agenda
+
+Demander une visite ou une animation → page Contact & demandes avec sujet = “Visite / animation”
+
+Section 1 – Visites tout public
+
+Titre (H2)
+
+Pour le grand public et les familles
+
+Texte :
+
+Plusieurs fois par an, La Réserve propose des visites et ateliers ouverts à tous :
+– visites guidées du site (histoire de la friche, bâtiment, jardins, maraîchage…) ;
+– balades dans les jardins : sol vivant, compost, biodiversité ;
+– ateliers pratiques : jardiner au naturel, bricolage nature, cuisine des légumes de saison…
+
+Ces rendez-vous sont annoncés dans notre agenda.
+
+Petit encadré :
+
+🔎 Pour connaître les prochaines dates, consultez la page Agenda.
+Si vous souhaitez organiser un groupe de particuliers (amis, voisins, association…), contactez-nous via la page Contact & demandes.
+
+Section 2 – Scolaires & groupes jeunesse
+
+Titre (H2)
+
+Venir avec une classe ou un groupe de jeunes
+
+Texte :
+
+En lien avec Nœux Environnement, La Réserve accueille des :
+– classes (de la maternelle au lycée),
+– centres de loisirs et structures jeunesse,
+– groupes d’enfants ou d’ados accompagnés par des éducateurs.
+
+Les animations s’appuient sur :
+– le bâtiment (énergie, matériaux, eau) ;
+– les jardins et le maraîchage ;
+– les espaces extérieurs (biodiversité, sols, eau, climat).
+
+Exemples de thèmes :
+– “Comprendre un écolieu vivant” ;
+– “Du sol à l’assiette” ;
+– “Biodiversité autour de nous” ;
+– “Changer nos habitudes pour le climat”.
+
+Encadré pratique :
+
+📌 Nous adaptons le contenu à :
+– l’âge des participants,
+– les programmes scolaires,
+– votre projet pédagogique.
+
+👉 Pour construire une visite scolaire ou un projet sur plusieurs séances, merci de passer par la page Contact & demandes (sujet : “Visite / animation”).
+
+Section 3 – Visites techniques & journées professionnelles
+
+Titre (H2)
+
+Visites techniques et journées professionnelles
+
+Texte :
+
+La Réserve est un site ressource pour les professionnels qui s’intéressent à la transition écologique :
+– élus et services techniques de collectivités,
+– bureaux d’études, architectes, paysagistes, urbanistes,
+– organismes de formation, écoles, universités,
+– entreprises engagées dans la RSE et la transition.
+
+Thématiques possibles :
+– transformation d’une friche commerciale en écolieu ;
+– désimperméabilisation et renaturation ;
+– réhabilitation frugale d’un bâtiment ;
+– tiers-lieu nourricier, maraîchage et alimentation ;
+– articulation projet social – projet écologique.
+
+Encadré :
+
+Les visites techniques peuvent combiner :
+– des temps en salle (présentation, échanges),
+– une visite commentée du site,
+– des ateliers de terrain.
+
+👉 Pour organiser une visite technique ou une journée pro, merci d’utiliser la page Contact & demandes (sujet : “Visite / animation – public professionnel”).
+
+Section 4 – Comment se passe une visite / animation ?
+
+Titre (H2)
+
+Comment ça se passe ?
+
+Liste en 3 étapes :
+
+Vous nous contactez
+– via la page Contact, sujet “Visite / animation”
+– en précisant : type de public, nombre de personnes, âge, thème souhaité, dates possibles.
+
+Nous construisons ensemble la proposition
+– contenu de la visite / animation,
+– durée, horaires,
+– organisation pratique (accès, équipements, repas, etc.).
+
+Nous confirmons la date et les modalités
+– vous recevez un mail récapitulatif,
+– avec, si besoin, une convention ou un devis.
+
+CTA final :
+
+🎟️ Prêt à préparer une visite ?
+→ Bouton “Demander une visite ou une animation” → page Contact & demandes (sujet pré-rempli).
+
+4. Page “Contact”
+
+C’est ta page pivot : toutes les actions “Demander une visite”, “Réserver une salle”, “Autre projet” y pointent, avec un sujet pré-sélectionné.
+
+H1
+
+Contact
+
+Intro
+
+Une question ? Un projet de visite ou d’animation ? Une réservation de salle ?
+
+Cette page vous permet de nous écrire facilement, en précisant le motif de votre demande.
+Nous vous répondrons dans les meilleurs délais.
+
+Section 1 – Choisissez le sujet de votre demande
+
+Tu peux le faire sous forme de boutons ou cartes cliquables.
+Quand on clique, ça pré-sélectionne le sujet dans le formulaire plus bas (ancre).
+
+Titre (H2)
+
+Que souhaitez-vous faire ?
+
+Cartes / boutons :
+
+Question générale
+
+Une question sur La Réserve, le lieu, un projet, une info pratique…
+
+Visite ou animation
+
+Organiser une visite guidée, une animation scolaire, un atelier ou une journée pro.
+
+Réservation de salle / événement
+
+Utiliser une salle de La Réserve pour une réunion, une formation, un événement…
+
+Marché & alimentation locale
+
+Question sur le marché, les retraits de commandes, les liens avec Nœux Environnement.
+
+Partenariat / projet
+
+Proposer un projet commun, un partenariat, une expérimentation, un événement partagé.
+
+Chaque carte a un bouton :
+
+“Choisir ce sujet” → scroll vers le formulaire + sélection du sujet.
+
+Section 2 – Formulaire de contact
+
+Titre (H2)
+
+Formulaire de contact
+
+Champs proposés :
+
+Sujet de la demande (liste déroulante)
+
+Question générale
+
+Visite / animation
+
+Réservation de salle / événement
+
+Marché & alimentation locale
+
+Partenariat / projet
+
+Nom / prénom (obligatoire)
+
+Structure (facultatif) – association, école, collectivité, entreprise…
+
+Email (obligatoire)
+
+Téléphone (facultatif mais conseillé si réservation/visite)
+
+Votre message (zone de texte)
+
+“Merci de préciser quelques éléments :
+– pour une visite / animation : type de public, nombre de personnes, âge, dates envisagées, thème souhaité ;
+– pour une réservation de salle : type d’événement, date, créneau horaire, nombre de personnes, salle souhaitée ;
+– pour un partenariat : votre structure, vos idées ou besoins, le contexte.”
+
+Case RGPD
+
+“J’accepte que mes données soient utilisées uniquement pour répondre à ma demande.”
+
+Bouton “Envoyer la demande”
+
+Section 3 – Coordonnées & délais de réponse
+
+Titre (H2)
+
+Nos coordonnées
+
+Texte :
+
+Vous pouvez aussi nous joindre :
+– par téléphone : [numéro]
+– par mail direct : [adresse générique]
+– ou venir sur place pendant les horaires d’ouverture :
+La Réserve – 22 bis rue Nationale, 62290 Nœux-les-Mines
+
+Titre (H3)
+
+Délais de réponse
+
+Nous faisons notre possible pour répondre rapidement à vos demandes.
+En période de forte activité (événements, saisons agricoles, vacances…), le délai peut être un peu plus long.
+
+Si vous n’avez pas de réponse après quelques jours, n’hésitez pas à nous relancer.
+
+
+Voici tout le contenu des pages à créer, n'hésite pas à remettre dans l'ordre le navbar avec les nouvelles pages pour que ce soit cohérent.
+Mets de nouvelles images pour ces nouvelles pages étant dans @images
+Fais un beau site web, bien organisé, lisible, pas que du texte en liste.
