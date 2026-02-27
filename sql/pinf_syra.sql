@@ -397,7 +397,8 @@ CREATE TABLE `creneaux` (
   `moment` varchar(100) NOT NULL,
   `debut` time NOT NULL,
   `fin` time NOT NULL,
-  `actif` boolean NOT NULL 
+  `actif` boolean NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
 --
@@ -541,9 +542,9 @@ ALTER TABLE `blocs_page`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
--- AUTO_INCREMENT pour la table `indisponibilites_salles`
+-- AUTO_INCREMENT pour la table `disponibilites_salles`
 --
-ALTER TABLE `indisponibilites_salles`
+ALTER TABLE `disponibilites_salles`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
