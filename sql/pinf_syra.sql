@@ -326,22 +326,19 @@ INSERT INTO `reinitialisations_mdp` (`id`, `utilisateur_id`, `jeton_hash`, `expi
 
 CREATE TABLE `reservations` (
   `id` int NOT NULL,
-  `site_id` int NOT NULL,
   `salle_id` int DEFAULT NULL,
   `prenom` varchar(80) NOT NULL,
   `nom` varchar(120) NOT NULL,
   `email` varchar(180) NOT NULL,
   `telephone` varchar(50) DEFAULT NULL,
-  `date_heure_souhaitee` datetime NOT NULL,
-  `duree_minutes` int DEFAULT NULL,
-  `effectif` int DEFAULT NULL,
+  `id_crenau` int NOT NULL,
   `besoin_materiel` longtext,
   `cuisine_pedagogique` tinyint(1) NOT NULL DEFAULT '0',
   `message` longtext,
-  `statut` enum('nouvelle','en_cours','devis_envoye','acceptee','refusee') NOT NULL DEFAULT 'nouvelle',
   `note_interne` longtext,
-  `date_creation` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `date_modification` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `date_demande` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_volue` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `validation` boolean NOT NULL DEFAULT False
 ) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
