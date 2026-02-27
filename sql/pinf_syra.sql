@@ -126,7 +126,7 @@ INSERT INTO `blocs_page` (`id`, `page_id`, `ordre`, `type`, `titre_publie`, `tit
 --
 
 CREATE TABLE `disponibilites_salles` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `salle_id` int NOT NULL,
   `date` date NOT NULL,
   `id_creneau` int NOT NULL
@@ -322,7 +322,7 @@ INSERT INTO `reinitialisations_mdp` (`id`, `utilisateur_id`, `jeton_hash`, `expi
 --
 
 CREATE TABLE `reservations` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `salle_id` int DEFAULT NULL,
   `prenom` varchar(80) NOT NULL,
   `nom` varchar(120) NOT NULL,
@@ -393,7 +393,7 @@ INSERT INTO `sites` (`id`, `nom`, `code`) VALUES
 --
 
 CREATE TABLE `creneaux` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `moment` varchar(100) NOT NULL,
   `debut` time NOT NULL,
   `fin` time NOT NULL,
@@ -404,9 +404,9 @@ CREATE TABLE `creneaux` (
 -- Déchargement des données de la table `creneaux`
 --
 
-INSERT INTO `creneaux` (`id`, `moment`, `debut`, `fin`, `actif`) VALUES
-(1, 'matin', 08:00:00, 12:00:00, True),
-(1, 'aprem', 14:00:00, 18:00:00, True);
+INSERT INTO `creneaux` (`moment`, `debut`, `fin`, `actif`) VALUES
+('matin', '08:00:00', '12:00:00', True),
+('aprem', '14:00:00', '18:00:00', True);
 
 
 -- --------------------------------------------------------
