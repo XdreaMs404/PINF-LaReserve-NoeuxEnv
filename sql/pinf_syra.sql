@@ -122,17 +122,14 @@ INSERT INTO `blocs_page` (`id`, `page_id`, `ordre`, `type`, `titre_publie`, `tit
 -- --------------------------------------------------------
 
 --
--- Structure de la table `indisponibilites_salles`
+-- Structure de la table `disponibilites_salles`
 --
 
-CREATE TABLE `indisponibilites_salles` (
+CREATE TABLE `disponibilites_salles` (
   `id` int NOT NULL,
   `salle_id` int NOT NULL,
-  `debut` datetime NOT NULL,
-  `fin` datetime NOT NULL,
-  `raison` varchar(180) DEFAULT NULL,
-  `cree_par_id` int DEFAULT NULL,
-  `date_creation` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date` date NOT NULL,
+  `id_creneau` int NOT NULL,
 ) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
@@ -389,6 +386,28 @@ CREATE TABLE `sites` (
 INSERT INTO `sites` (`id`, `nom`, `code`) VALUES
 (1, 'Noeux Environnement', 'noeux'),
 (2, 'La Réserve', 'reserve');
+
+-- --------------------------------------------------------
+--
+-- Structure de la table `crenaux`
+--
+
+CREATE TABLE `crenaux` (
+  `id` int NOT NULL,
+  `moment` varchar(100) NOT NULL,
+  `debut` time NOT NULL,
+  `fin` time NOT NULL,
+  `actif` boolean NOT NULL 
+) ENGINE=InnoDB;
+
+--
+-- Déchargement des données de la table `creneaux`
+--
+
+INSERT INTO `creneaux` (`id`, `moment`, `debut`, `fin`, `actif`) VALUES
+(1, 'matin', 08:00:00, 12:00:00, True),
+(1, 'aprem', 14:00:00, 18:00:00, True);
+
 
 -- --------------------------------------------------------
 
