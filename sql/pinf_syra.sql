@@ -129,7 +129,7 @@ CREATE TABLE `disponibilites_salles` (
   `id` int NOT NULL,
   `salle_id` int NOT NULL,
   `date` date NOT NULL,
-  `id_creneau` int NOT NULL,
+  `id_creneau` int NOT NULL
 ) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
@@ -389,10 +389,10 @@ INSERT INTO `sites` (`id`, `nom`, `code`) VALUES
 
 -- --------------------------------------------------------
 --
--- Structure de la table `crenaux`
+-- Structure de la table `creneaux`
 --
 
-CREATE TABLE `crenaux` (
+CREATE TABLE `creneaux` (
   `id` int NOT NULL,
   `moment` varchar(100) NOT NULL,
   `debut` time NOT NULL,
