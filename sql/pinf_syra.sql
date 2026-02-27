@@ -126,7 +126,7 @@ INSERT INTO `blocs_page` (`id`, `page_id`, `ordre`, `type`, `titre_publie`, `tit
 --
 
 CREATE TABLE `disponibilites_salles` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL,
   `salle_id` int NOT NULL,
   `date` date NOT NULL,
   `id_creneau` int NOT NULL
@@ -322,20 +322,20 @@ INSERT INTO `reinitialisations_mdp` (`id`, `utilisateur_id`, `jeton_hash`, `expi
 --
 
 CREATE TABLE `reservations` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL,
   `salle_id` int DEFAULT NULL,
   `prenom` varchar(80) NOT NULL,
   `nom` varchar(120) NOT NULL,
   `email` varchar(180) NOT NULL,
   `telephone` varchar(50) DEFAULT NULL,
-  `id_crenau` int NOT NULL,
+  `id_creneau` int NOT NULL,
   `besoin_materiel` longtext,
   `cuisine_pedagogique` tinyint(1) NOT NULL DEFAULT '0',
   `message` longtext,
   `note_interne` longtext,
   `date_demande` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `date_volue` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `validation` boolean NOT NULL DEFAULT False
+  `date_voulue` date NOT NULL,
+  `validation` boolean NOT NULL DEFAULT FALSE
 ) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
@@ -393,21 +393,20 @@ INSERT INTO `sites` (`id`, `nom`, `code`) VALUES
 --
 
 CREATE TABLE `creneaux` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL,
   `moment` varchar(100) NOT NULL,
   `debut` time NOT NULL,
   `fin` time NOT NULL,
-  `actif` boolean NOT NULL,
-  PRIMARY KEY (`id`)
+  `actif` boolean NOT NULL
 ) ENGINE=InnoDB;
 
 --
 -- Déchargement des données de la table `creneaux`
 --
 
-INSERT INTO `creneaux` (`moment`, `debut`, `fin`, `actif`) VALUES
-('matin', '08:00:00', '12:00:00', True),
-('aprem', '14:00:00', '18:00:00', True);
+INSERT INTO `creneaux` (`id`, `moment`, `debut`, `fin`, `actif`) VALUES
+(1, 'matin', '08:00:00', '12:00:00', True),
+(2, 'aprem', '14:00:00', '18:00:00', True);
 
 
 -- --------------------------------------------------------
@@ -451,12 +450,12 @@ ALTER TABLE `blocs_page`
   ADD KEY `dernier_modifie_par_id` (`dernier_modifie_par_id`);
 
 --
--- Index pour la table `indisponibilites_salles`
+-- Index pour la table `disponibilites_salles`
 --
-ALTER TABLE `indisponibilites_salles`
+ALTER TABLE `disponibilites_salles`
   ADD PRIMARY KEY (`id`),
   ADD KEY `salle_id` (`salle_id`),
-  ADD KEY `cree_par_id` (`cree_par_id`);
+  ADD KEY `id_creneau` (`id_creneau`);
 
 --
 -- Index pour la table `medias`
@@ -506,8 +505,8 @@ ALTER TABLE `reinitialisations_mdp`
 --
 ALTER TABLE `reservations`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `site_id` (`site_id`),
-  ADD KEY `salle_id` (`salle_id`);
+  ADD KEY `salle_id` (`salle_id`),
+  ADD KEY `id_creneau` (`id_creneau`);
 
 --
 -- Index pour la table `salles`
@@ -596,6 +595,15 @@ ALTER TABLE `salles`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT pour la table `creneaux`
+--
+ALTER TABLE `creneaux`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `creneaux`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `sites`
 --
 ALTER TABLE `sites`
@@ -621,11 +629,13 @@ ALTER TABLE `blocs_page`
   ADD CONSTRAINT `blocs_page_ibfk_4` FOREIGN KEY (`dernier_modifie_par_id`) REFERENCES `utilisateurs` (`id`) ON DELETE SET NULL;
 
 --
--- Contraintes pour la table `indisponibilites_salles`
+-- Contraintes pour la table `disponibilites_salles`
 --
-ALTER TABLE `indisponibilites_salles`
-  ADD CONSTRAINT `indisponibilites_salles_ibfk_1` FOREIGN KEY (`salle_id`) REFERENCES `salles` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `indisponibilites_salles_ibfk_2` FOREIGN KEY (`cree_par_id`) REFERENCES `utilisateurs` (`id`) ON DELETE SET NULL;
+ALTER TABLE `disponibilites_salles`
+  ADD CONSTRAINT `disponibilites_salles_ibfk_1` FOREIGN KEY (`salle_id`) REFERENCES `salles` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `disponibilites_salles`
+  ADD CONSTRAINT `disponibilites_salles_ibfk_creneau` FOREIGN KEY (`id_creneau`) REFERENCES `creneaux` (`id`) ON DELETE RESTRICT;
 
 --
 -- Contraintes pour la table `medias`
@@ -668,8 +678,10 @@ ALTER TABLE `reinitialisations_mdp`
 -- Contraintes pour la table `reservations`
 --
 ALTER TABLE `reservations`
-  ADD CONSTRAINT `reservations_ibfk_1` FOREIGN KEY (`site_id`) REFERENCES `sites` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `reservations_ibfk_2` FOREIGN KEY (`salle_id`) REFERENCES `salles` (`id`) ON DELETE SET NULL;
+
+ALTER TABLE `reservations`
+  ADD CONSTRAINT `reservations_ibfk_creneau` FOREIGN KEY (`id_creneau`) REFERENCES `creneaux` (`id`) ON DELETE RESTRICT;
 
 --
 -- Contraintes pour la table `salles`
