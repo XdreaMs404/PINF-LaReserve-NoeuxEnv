@@ -1,0 +1,554 @@
+/* Ici, je définis mes variables pour les couleurs et les polices, comme ça je peux les changer partout d'un coup */
+:root {
+    --primary-color: #2E7D32;
+    /* Vert Forêt */
+    --secondary-color: #8D6E63;
+    /* Terre/Bois */
+    --background-color: #FAFAFA;
+    /* Blanc Cassé */
+    --text-color: #333333;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --spacing-unit: 1rem;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Un petit reset pour enlever les marges par défaut du navigateur */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Les styles de base pour tout le corps de la page */
+body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Des classes utilitaires pour la mise en page */
+/* Utilities */
+.container {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: #6d4c41;
+    transform: translateY(-2px);
+}
+
+/* Le style de mon en-tête et de la navigation */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-links a {
+    font-weight: 500;
+    padding: 0.5rem;
+    display: block;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+    background-color: var(--light-gray);
+    border-radius: 4px;
+}
+
+@media (min-width: 992px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        width: auto;
+        gap: 1.5rem;
+    }
+
+    .nav-links a {
+        padding: 0;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        background-color: transparent;
+    }
+}
+
+/* Le style de la grande bannière (Hero) */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/hero_real.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 2rem 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Mes grilles pour aligner les éléments (cartes, images...) */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.card-content p {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    font-size: 0.95rem;
+}
+
+.card-content .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 3rem 0;
+}
+
+.text-image-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .text-image-block {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .text-image-block.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .text-content,
+    .image-content {
+        flex: 1;
+    }
+}
+
+.text-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.image-content img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Le style du pied de page */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 0 1rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: var(--white);
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+}
+
+/* Page Header (for subpages) */
+.page-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Le bouton spécial pour les dons */
+.btn-don {
+    background-color: var(--primary-color);
+    /* Green */
+    color: var(--white) !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 20px !important;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-don:hover {
+    transform: scale(1.05);
+    background-color: var(--white);
+    color: var(--primary-color) !important;
+}
+
+/* Planning Placeholder */
+.planning-placeholder {
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+    color: #666;
+}
+
+.planning-placeholder h3 {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Partner Logos */
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.partner-logo {
+    height: 60px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+/* Grille de logos pour les partenaires */
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 1.5rem;
+}
+
+.logo-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+    transform: translateY(-5px);
+}
+
+.logo-item img {
+    max-height: 70px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* La Réserve Button Fix */
+.la-reserve-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}

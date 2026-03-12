@@ -1,0 +1,187 @@
+body {
+    background-color: #f4f4f4;
+    font-family: sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Boutons classiques */
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-danger { background: #dc3545; color: white; }
+.btn-secondary { background: #6c757d; color: white; }
+.btn-warning { background: #ffc107; color: black; }
+.btn-success { background: #28a745; color: white; }
+.btn-sm { padding: 4px 8px; font-size: 0.8rem; }
+
+/* Tableaux */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.table th {
+    background: #f8f9fa;
+    font-weight: bold;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.badge-warning { background: #ffc107; color: black; }
+.badge-success { background: #28a745; color: white; }
+.badge-danger { background: #dc3545; color: white; }
+
+/* Formulaires Admin */
+.admin-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form-group-admin {
+    margin-bottom: 15px;
+}
+
+.form-group-admin label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-admin {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-inline-admin .form-group-admin {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+    width: auto;
+}
+
+.form-inline-admin .input-admin {
+    width: auto;
+    min-width: 200px;
+}
+
+/* Onglets simples */
+.tabs-container {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabs-container a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #666;
+    border: 1px solid transparent;
+    border-bottom: none;
+    background: #f9f9f9;
+    margin-right: 5px;
+    border-radius: 4px 4px 0 0;
+}
+
+.tabs-container a.active {
+    background: white;
+    border-color: #ddd;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: -1px;
+    padding-bottom: 11px;
+}
+
+/* Salles et créneaux (visuel simple) */
+.salle-bloc {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.salle-titre {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.liste-creneaux-salle {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.liste-creneaux-salle li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.msg-text {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 5px;
+}

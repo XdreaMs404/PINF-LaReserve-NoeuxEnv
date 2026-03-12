@@ -1,0 +1,228 @@
+pas de formation ici. Euh alors est-ce que vous avez compris sur le jardin et pour insister, nous on a été formé à ce qu'on appelle le plessage. Donc le plessage pareil inventé c'est venir pas rendre arriver à voir les arbres d'une certaine manière de manière à les coucher pour faire une clôture mais la clôture reste vivante. H ça fait tout le long. Voilà d'ailleurs qu'on finit parce qu'on pas eu naturez en fait c'est plein de petites choses comme ça disséminé partout pour montrer aux gens ce que chacun peut faire. Pourquoi pas faire ça chez toi ?
+Pourquoi pas faire d'autres chos Alors dans tout ce projet, ce que vous avez vu à présent de terrain, on savait que ce serait pas économiquement viable pour l'équipe maréchage. Trop petit en terme de surface de culture. Donc très vite Euh, on a regardé pour d'autres parcelles et on s'est rendu compte qu'ici en fait, il y a des parcelles qui appartiennent à la commune. Donc la chance qu'on a eu malgré il a fallu négocier beaucoup avec les agriculteurs qui étaient déjà en place pour pouvoir louer les terres à la commune. Donc là, on a un bail avec la commune pour commencer à voir en sachant que là-bas, donc je sais pas si vous voyez les dernières poteaux là-bas, la zone qui sera plutôt là-bas, on veut faire une forêt nourricière avec des armes.
+OK. avec trois typologies forêt trempérée donc ce que vous vous connaissez ce qu'on connaît tous ici forêt adapté au méditerranéen donc on peut dire aussi adapté au changement climatique ce sont des espèces qui vont remonter dans tous les cas vous êtes encore
+et une zone plutôt exex exotique un arbre exotique
+qui est pas top normalement pour la biodiversité sauvage mais on se dit à un moment donné il faut aussi prévoir l'avenir et on typiquement faire venir les chaînes à gros gland vous avez déjà l' glace l' glace Pardon ?
+Scratch qui transporte c'est pas une noisette, c'est un gland. H
+un gros gland.
+Ouais,
+ça c'est intéressant pour commencer à se nourrir là-dessus. Donc les petits glans qui vont par ici puis qu'en plus ils sont compliqués à enlever les beaucoup de tes là pour le tour, j'étais très rapide. Et là du coup à l'atelier euh ce que fait votre collègue, c'est vous le vendez ça aussi ou juste
+alors là là ce qu'elle en train de faire ce que vous avez vu les dessins. C'est une commande d'une commune.
+Ouais.
+Euh encore que je suis peut-être en train de dire une bêtise commune ou conservatoire parce qu'on travaille aussi avec le conservatoire des espaces naturels, conservatoire botanique de Bayal aussi.
+Et sur les chantiers typiquement on va sur les sites du conservatoire mais aussi sur les sites des DE 62 donc du département. Donc 62 c'est Merci On va aller se rasseoir là-bas. Ça c'est ce que les archives nous avaient fait avec vos démarrages euh tout ce projet. Vous voyez bien que les extérieurs ça correspond plus. La mar elle est pas la mar elle a bougé plein de fois était là, elle a été là-bas. Bref, ça c'est les évolutions en cours en cours de route pour plein de petits détails différents. Euh et en fait c'était plus simple de faire des gros zones que plein de petits carrés.
+Oui
+parce que ça devient très soit en terme d'entre retient aussi à la longue ou des choses comme ça c'est devenu trop mais globalement en fait on n pas renié sur les valeurs qu'on voulait on a renié sur les moyens techniques ce que je viens d'évoquer pas sur le récupération le réemploi et aussi on avait instauré une clause de pour les entreprises insertion
+c'est qu'elles étaient obligées d'employer les personnes qui étaient dans en partie un petit peu Donc après ça vous avez des questions. Qu'est-ce qu'il faut construire ? Vous avez compris en fait je vois mal faire l'un sans faire l'autre. Oui. Bah là vite fait, c'est quoi je pensais, je sais pas si ça vous irait pour on va dire relier entre guillemets les deux sites. Par exemple sur le site de né environnement, peut-être un onglet ou un truc du style qui renvoie sur le site de la réserve pour montrer que ça appartient. Et sur le site de la réserve, si on va directement dessus, par exemple juste par exemple le logo de nœud environnement dans un des coins et à la limite si on veut on peut cliquer dessus et ce qui nous ramène au style principal de nœud environnement.
+Comme ça, ça relie les deux en soi et après il y a les infos l'une sur l'autre.
+Ouais. un truc comme ça.
+Est-ce que vous vous devez travailler l'aspect parce que ça moi je m'y connais pas des masses l'aspect légal de ce qu'il faut sur un site internet,
+c'est-à-dire tout ce qui est copyright
+bah sûrement où il y a peut-être des choses, je sais pas, il y a tout ce qui est cookie, tout ce qui est
+on va pas forcément évoqué
+ça, on l'a pas évoqué après on pourra demander demandera mais
+après ça je pense qu'on peut s'en occuper
+parce que nous c'est nous l'idée c'est pas de collecter les données des gens, ça on s'en fout.
+Oui oui
+mais enfin il y a Euh tout un volet légal autour d'un site internet aussi que des choses obligatoires à installer. Euh
+ouais mais faut faut voir parce que là le dernier cours de de Java qu'on a eu, il y avait pas une histoire de cookie et tout et si on
+typiquement si on fait un événement qu'une personne veut s'inscrire euh c'est qu'à un moment donné on a récupéré ses données quand même quoi.
+Ouais c'est ça.
+Ouais
+mais après je pense c'est le minimum la problématique des cookies on l'a vu he l'année dernière.
+Ouais ouais
+après je pense aussi ça serait juste histoire de juste pour la base de données histoire d'avoir un compte et de savoir quels sont les droits de cette personne quoi. Après l'adresse mail si à la limite s'il faut même pas besoin de créer un compte avec une adresse mail peut-être juste un pseudo ou un quelque chose du style quoi.
+Au niveau des besoins çaadresse mail s'il y a pas besoin d'adresse mail pas besoin. Ouais c'est ça besoin.
+Quelles sont les limites ? Je vais le formuler comme ça de votre prestation jusqu'où vous allez
+c'estàd les dates
+est-ce que vous allez jusqu'à installer le site sur le l'hébergeur web ou pas ?
+Je
+c'est justement où
+vous me fournissez tiens là les données du site et puis c'est à moi de me débrouiller. Monsieur Cubac qui l'avait dit enfin notre professeur nous avait dit que c'était à voir avec vous justement c'était est-ce que nous on va jusqu'à l'installation ou est-ce que
+moi plus vous allez loin plus ça me voit. OK. Nous
+je pense que vous avez compris maintenant tout ce que je vous expliqué là.
+Nous notre principale limite ça va être au niveau du temps
+parce que on a une date vraiment limite pour rendre le projet. Donc ça va être je pense la plus
+ce qui va le plus nous limiter en vrai.
+Ouais je la
+après je vous avouerai que si vous me filez les données et que j'ai plus qu'à ager en utilisant je sais pas et que vous m'expliquez utilise tel logiciel machin, je vais savoir me débrouiller quoi. OK.
+Faila peut-être, j'en sais rien. Euh, je vais savoir me débrouiller. Ce qui ce qui est plus prioritaire pour moi, si vous pouvez pas aller jusque là, c'est de me donner un outil fonctionnel, quoi.
+OK.
+Et alors, pareil dans les choses peut-être pas activées tout de suite. Euh, voyez, je vous expliquer que les paniers actuellement, du coup, maintenant les gens peuvent commander sur le court circuit. Donc, qu'est-ce qu'on fait dans un premier temps peut-être un lien vers le court circuit pour ceux qui veulent commander ? Euh, dans l'idée à l'origine, on voulait que les gens puisse commander un P directement sur notre site internet.
+Moi, j'aurais bien voulu aussi que il puisse afficher euh qu'il puisse réserver une salle en ligne. Hm
+hm.
+Ouais.
+Euh s'il faut, je vous remontre les salles, hein. Euh là-dessus, on n'est pas encore bon nous en terme de tarif.
+Donc pareil, ça c'est peut-être un truc à activer par la suite. Donc si vous avez le temps d'aller jusque là, tant mieux. Euh à défaut, si vous y allez pas sur ce genre de module, si c'est pour ça que moi je parlais de WordPress au démarrage, c'est que comment je fais le jour je veux le rajouter quoi.
+Ouais,
+faut que vous construisiez bien l'ensemble de l'interface que si j'ai besoin même s'il y a une note, je sais pas vos suivants qui ont de nouveaux sites internet, hop bah oui, peut-être qu'ils reprendront votre site et il ils retravailleront dessus, ils rajouteront des modules parce que vous ayez pas eu le temps ou parce que
+Et pour commander les paniers ou réserver des salles ou peu importe, est-ce qu'on parle d'un paiement en ligne ou juste on réserve et simplement le paiement bah c'est en
+J'ai pas la réponse parce que le paiement en ligne c'est pareil, je sais pas si vous pouvez aller jusque là parce que là ça demande des niveau c'est particulier ça on l'a pas fait faudrait qu'on se renseigne mais une fois de plus je reviens sur mon parce que je le connais WordPress ils ont un module et dans ce module en fait il y a le partenariat qui marche bien qui fait qu'en sorteou
+quand on autohéberge faut faire gaffe à ce genre de chos ça faut qu'on regarde ça pour demander au professeur mais c'est vrai que
+mais admettons qu'on puisse pas le faire est-ce que ça serait grave si à défaut la personne peut réserver
+Ouais ça ça réserve il y a pas de problème. Je dire je prends ce panier avec ça dedans, je le réserve.
+Le le défaut qu'on a déjà constaté dans les quand le fait que les gens payent payent pas c'est que du coup il y a Ouais, c'est ça.
+C'est il y a Oui, il y a ce truc de que si j'ai déjà payé au moins la moitié ou j'en sais rien, je vais avoir plutôt tendance à revenir quoi.
+Et ça va être d'autant plus chiant pour une réservation de salle.
+Oui. Oui, c'est ça. Ouais, c'est pour ça faut
+un panier, on arrivera à se débrouiller. On peut le garder quelque salle si on vous bloquer la salle alors qu'au final ils viennent pas. Ouais. Puis qu' aurait pu servir à quelqu'un d'autre ou pour
+Donc ça pour le coup pour la salle à la limite euh ce qui va sûrement se passer c'est ils ont vu une date libre. Tiens, je passe je passe comment ? Je voudrais pour telle date machin euh nous on reçoit la demande et puis on fait un devis derrière et à eux nous signer le devis.
+OK,
+je
+Mais du coup ça veut dire agenda ça veut dire relier l'agenda que nous on utilise actuellement avec ce trucl
+en sachant que nous on utilise Next Cloud qui est déjà sur notre NAS en fait.
+Next Cloud.
+Ouais. Donc c'est du libre. Euh et dessus en fait c'est un peu comme Google Agenda mais du coup on a créé un agenda sale. Ouais.
+Et du coup tac et peut-être que les ils peuvent s'appeler entre eux et se comparer. Ça va se faire.
+Euh et après j'ai pas la réponse sur l'autohébergement ou pas. Euh parce que je ne sais pas en fait je ne sais pas les contraintes de l'autohébergement. Les gros avantages que je vois c'est qu'on s'arrête chez nous, on est propriétaire et c'est vraiment pas que l'aspect financier.
+Ouais.
+Euh maintenant dans les contraintes, je ne sais pas quand même des serveurs plus puissants que je pense que Euh,
+il a des chances
+mais quand VH il brûle après c'est ça.
+Enfin VH ou un autre.
+Non non, il faut qu'on faut qu'on se renseigne
+et après il faudra parler de tout l'aspect du site, les couleurs du site alors là je suis très mauvais moi pour ça.
+OK. Ça
+on a pas de chargé de com.
+Bah ça à ce moment on peut vous faire des mup et vous envoyer et vous nous dites ce que vous préférez et nous on fait sur cette formule là.
+J'en au collègues ce genre de choses.
+Ouais
+moi je vais plus vous ce qui sera rapide pour vous répondre c'est sur les fonctionnalités. ce qui va être dur en du visuel. Ça c'est du subjectif et il faut tant que mes collègues il puissent regarder aussi. Donc
+on vous propose des on vous envoie des moes ce que vous préférez.
+Ça le gros avantage aussi de WordPress, je suis désolé de revenir làdessus
+mais c'est que demain on veut changer le thème du site il juste à changer de clic. C'est fait quoi. Ouais.
+Faudra voir si on peut faire tout le site et après le faire héberger par Je sais pas si c'est le bon terme faire héberger pas
+enfin pas faire héberger mais en fait en mode ça on tape les lignes de code pour faire le site de base on fout sur WordPress et après les
+les thèmes qui sortent dans WordPress sur comment tu affiches les la partie publication la partie comment sont affiché les pages c'est du enfin c'est les gens qui le font donc c'est du code
+pareil le module agenda c'est du code qui a été fait à un moment donné
+je demanderai à ma à ma colloque ce soir elle travaille beaucoup surpress je lui demander Ils ont beaucoup évolué aussi. Maintenant, ils fonctionnent en forme de bloc quand on rentre. Enfin, comment on y intègre une vidéo quand on a besoin de mettre une vidéo, comment
+par exemple un truc, je sais pas si vous avez en tête là le site actuel, mais est-ce que par exemple vous voulez garder à peu près tous les tous les onglets qu'il y a déjà à proposer quoi ?
+Par exemple, est-ce que on garde quand même tout ça ou pas ?
+Je pense qu'il y a des trucs qui doivent dégager.
+Par exemple, là, j'ai vu qu'il y avait un onglet De toute façon, il y a des trucs en terme de nom. Les jardins du cœur, ça existe plus en fait. C'est le maréchage. Maintenant, en fait, c'est activité principale, ça ça va rester. C'est ce que je vous ai évoqué en fait au final. Alors, les termes changent mais grosso modo, les onglets principaux vont rester là.
+Euh, par exemple, là, il y avait un truc sur la ré
+Alors, ça ça c'est des pages, c'est du fix, ça va jamais trop bouger une fois que nous on aura fait le texte.
+Ça fait quand même bien de le laisser quoi. Ça ça montre. Ouais.
+Ouais. Ouais. Formulaire de contact, ça fait partie des des prérequis mais je suis pas sûr qu' Il faille forcément le mettre en avant.
+Ouais, peut-être pas un formulaire mais comme je sais pas si vous voyez sur beaucoup de pages aujourd'hui quand on descend tout en bas, il y a un truc contact avec une adresse mail, un numéro de téléphone, les réseaux sociaux et cetera. Ça peut ça peut se rajouter. Le le gros problème qu'on a eu aussi avec ça, c'est que vous voyez, on est peu nombreux, on est déjà bien chargé. C'est il y a des il y a des pages qui ont pas été qui ont jamais été mises à jour, que moi j'avais créé à l'origine mais qui ont jamais été mises à jour. OK.
+Et ça et ce sera le même problème parce que vous vous pouvez pas remplir ces pages.
+Ouais.
+C'est pas vous qui avez les infos.
+OK.
+Ce qu'il faut garder, c'est bien entendu log environnement qui est là. Alors ça c'est une bannière qui avait été faite. Je peux vous la ressortir si vraiment il faut.
+Ouais, pourquoi pas. Ça peut être pas mal.
+Mais je sais pas si je ça c'est faut que je négocie avec les collègues. Je sais pas si on la garde ou pas.
+En sachant que j'ai pas d'autres visuel de toute façon.
+Oui, c'est ça. OK.
+Euh la réserve euh la réserve, il y a le logo qui existe ou différentes couleurs.
+Donc ça, je peux éventuellement vous l'envoyer aussi si besoin.
+Ouais, pourquoi pas.
+Euh mais on n pas de charte, enfin une pseudo charte graphique liée au logo mais on a pas d'image. Oui, avec tout ça.
+Après ça, à la limite
+une après-midi, on vient, on prend des photos de choses qu'on peut qui peut qu'on pense peut être intéressantes à mettre sur le site et puis euh donc si vous avez besoin de revenir, vous l'avez vu, le lieu est ouvert, c'est pas un souci mais ce que je vous demanderai c'est au minimum de me prévenir quand par principe.
+Il suffit qu' qui ait vraiment un gros é enfin, j'en sais rien.
+Ouais, un événement et que ce soit pris.
+Euh, vous voyez à côté, on a ça, c'est en fait nos bénévoles qui ont créé ça. OK.
+Donc ça, on le bon Voilà, c'était des data en particulier mais mais on le on le loue. Donc comment euh comment il y a un onglet menuiserie, les gens peuvent voir ce que Cathy a fait, ce que vous avez vu, comment on a l'expoc peut-être tourner avec notre boss de de photos derrière, j'en sais rien.
+OK,
+je vais loin mais après je sais pas si vous vous avez déjà pensé à des fonctions auxquelles j'ai pas
+euh
+on entendait pas mal de voir aussi.
+Ouais, ça voir à quoi s'attendre, ce qui ce que vous attendez. et cetera.
+Ça va, ça correspond quand même à ce que vous avez besoin. C'est pas un coup dans l'eau là d'être venu non.
+Ce que je veux pas non plus, c'est vous mettre à défaut par rapport à ce que vos enseignants demandent.
+Non, c'est c'est c'est ce qui est demandé, c'est ça c'est
+et cetera.
+Ouais. Il nous faudra une liste du coup de tout ce qu'il faut mettre comme information. Bah tout ce qu'on a visité aussi. Je sais pas si c'est possible de tout regrouper en une liste pour que nous on sache tout ce qui doit être mis dans c'est tout là-dedans.
+Ah il y en a une bonne partie là. sur le site de environnement. Après oui, spécifique à mais c'est là où j'ai encore du mal, c'est qu'est-ce qui qu'est-ce qui relève du pur la réserve et qu'est-ce qui relève de nœud environnement.
+H l'occasion de salle, ce sera sur le site la réserve. Il y a pas pour moi de mon point de vue à mettre ça sur nos environnements. OK.
+Maintenant, une animation, une école regarde sur notre site internet mais de la réserve Mais euh c'est les animateurs de né environnement qui vont faire l'animation.
+Donc une un onglet animation sur la réserve qui alors typiquement la réserve c'est ce que je vous ai évoqué chose qu'on faisait pas avant des séminaires entreprise. On crée une page où on propose quelque chose.
+Moi j'aimerais y faire venir plus des lycées collèges
+euh typiquement pour les salles, moi j'envisage bien qu'on s'équipe de microscope, qu'on aille dehors faire des prélèvements et qu'on regarde en salle après. Euh voilà. Euh typiquement, je m'y attendais pas. On a l' RTS donc qui sont plutôt sur le social euh qui nous contactent pour faire une visite et leur expliqué comment on a monté le projet dont je vous parlais du mercredi
+parce que c'est du social en fait. Moi à l'origine c'était pour faire du jardin après des gens mais au final je fais du social. Et ça je m'y attendais pas à ce genre de parce que moi j'ai voilà environnement et cetera et en fait non. Euh donc sur le site de la réserve, oui, location de salle, on l'a dit, euh séminaire entreprise. Euh mais du coup, il y aurait alors nous on est en train de monter ce qu'on appelle nous des parcours pédagogiques. Alors peut-être que peut-être un anglais, pour l'instant, on l'appelle parcours pédagogique et s'il faut on changera le nom par la suite. Et dedans, on y retrouverait ce que les gens peuvent découvrir ici. Alors, sur les parcours pédagogiques, ce qu'on est en train de monter avec les les collègues animation, en gros est en train de réfléchir à une boîte à outil. En gros, on fait on est en train de faire cette boîte, même pas les outils en moment. L'idée, c'est que vous avez eu le nombre de thématique qui peut être abordé. Parfois, j'ai des demandes ah je voudrais travailler sur l'environnement. Ça veut tout dire et rien dit. C'est comme si vous je vous dis je veux faire de l'informatique. Tellement de métiers en informatique, il y a tellement de métiers à l'environnement, c'est pas Et donc on essaie de thématiser, vous l'avez vu, l'eau, l'énergie, le bâtiment. Voilà. Et l'idée c'est de donner nous ce qu'on essayer de construire, c'est les grands objectifs, les grandes valeurs qu'on veut transmettre. Ce que je vous ai évoqué un peu dans dans la visite. Par exemple, le réemploi, par exemple, ça va identifier les plantes euh sans partir dans des extraits. Pourquoi ça ? C'est que derrière après, on a une demande et peu importe l'animateur qui sera environnement ou pas, et je vais revenir sur le ou pas, et ben il pioche dans cette boîte à outil parce qu'il avait envie de travailler sur vous. Il regarde les grandes valeurs, les grands messages qu'on veut faire passer. Il les voit et construit. son animation derrière et cette animation elle a pas été créée en tant que telle où ça permet ah bah moi je veux travailler sur l'eau mais sur l'aspect biodiversité ok eau plus biod ou je veux travailler sur la ressource en eau pour l'être humain ok du coup vous voyez c'est pas la même manière d'aborder les choses et selon le public aussi qui c'est des enfants de 8 ans et des adultes c'est pas du tout la même manière d'aborder les choses et cette boîte à outil l'idée ce serait un enseignant arrive avec une classe et ben pour réduire ses coûts Et ben plutôt que bloquer le temps d'un animateur, bah c'est lui qui fera l'animation et donc c'est le bateau qui piocherait dedans et puis il pourrait malader. H
+donc vous voyez c'est ça c'est pour revenir sur ce que je veux derrière l'onglet parcours péd. C'est peut-être nous à mettre juste des grandes phrases
+euh mais laisser cette liberté aux gens. Demain, c'est peut-être un bénévole qui fera un des parcours. Ce que je vous ai fait là aujourd'hui, ce sera peut-être un bénévole qui veut le fera. Mais du coup ce bénévole, il a besoin de savoir quel message on veut philosophique, si je peux dire, on veut transmettre. Hm
+hm.
+Que il c'est tout il a ou pas, ça on s'en fout. Ce qui est important c'est le message à voilà. Oui, si on est plusieurs dans nos têtes. Voilà, je sais pas si vous avez d'autres questions. J'espère rien avoir oublié. Bon, après, il y a peut-être des choses. Tu sais euh, tu parlais d'une date limite. C'est quoi votre date limite ? 30
+31 mars. Ouais. 31 mars. Grosse limite.
+Ouais,
+j'ai cru que tu allais me dire 31 de
+non même nous là ça serait un peu chaud là.
+31 mars et il vous donne enfin dans la semaine si ça existe. Est-ce que vous avez une demi-journée de fléchier là-dessus ou de libérer là-dessus ? Je sais pas comment ça fonction. On a très peu d'heures vraiment dans notre emploi du temps et du coup c'est sur notre temps libre qu'on doit travailler sur ça. Notre jeudi après-midi. Souvent on l'a
+euh Euh donc ce sera
+99 % du temps on a le jeudi après-midi. Temps là. Donc c'est surtout le jeudi après-midi qu'on va travailler là-dessus, je pense. Mais euh OK, c'est bon pour moi. Je vois pas. Je réfléchis en même temps mais je vois pas ce que j'aurais d'autres parce que j'ai fait le tour. Ah oui, dans les petits sujets. Ouais. Alors ça c'est tercière euh la production des panneaux solaires, ça peut être affiché sur le site de la réserve, des données de conso, un truc comme ça. Hm
+hm. Ouais. Le ce que ce que produisent vos les panneaux. Ouais. OK.
+Mais ça c'est qu'un qu'un exemple. Peut-être ils nous font un onglet consommation du enfin conso ou je sais pas comment
+peut-être un onglet présentation du de l'espace en général ou du coup ça parle des locaux avec tous les différentes euh façon de
+d'isoler les panneaux. Ouais,
+pourquoi pas ? Ouais, parce que typiquement la télé qui est là en fait, c'est d'afficher à la fois normalement la production.
+On le fait mais je préfère pas l'allumer tout le temps, ça sert à rien.
+Et ce serait d'afficher les événements. Donc pourquoi pas afficher votre site internet là-dessus et puis les événements des fils, j'en sais rien.
+Je sais pas si c'est une bonne idée ou pas. Hon truc
+bienvenue à environnement.
+Euh ouais. Est-ce que vous préférez qu'on fasse directement le moookup vis ? Donc des visuels qui vous permettent de voir un peu et qu'on travaille sur ça au niveau de la communication ou est-ce que vous préférez des des résumés quoi des pour pour qu'on là je vais faire un enfin on va faire un retour sur tout ce qui a été dit aujourd'hui.
+Est-ce que vous préférez qu'on discute comme ça
+sur est-ce que vous validez ou pas tout ce qui a été dit ? Est-ce que vous êtes d'accord sur pour voir si on a compris mutuellement ?
+Oui oui ça oui oui ça c'est c'est intéressant.
+Euh maintenant moi ce qui ce qui en terme de priorité Euh l'aspect visuel de mon point de vue, il est secondaire.
+Oui, quand je parle dans l'aspect visuel, c'est plus voir que toutes les choses sont dedans, quoi.
+Ouais.
+Que tout est réunis.
+Ouais. Oui. Mon avis, une urgence école. Oui.
+Oui, moi aussi. OK, tu vas parfait.
+C'est Augustin ou c'est On récupéré du tshirt.
+Ah ok.
+Oui. Non. Ben tant pis.
+Oui. Bon allez. Bah j'irai chercher Maxime après Sinon, j'irai. Bah ouais, je veux Bah, tu me dis si tu peux sinon ce sera demain. Ah, ce soir, je peux m'arranger pour y aller. Oui, mais je peux appeler Rodrig, c'est pas grave.
+Ouais, je ver bien. Ouais, une chose à la fois. Oui. Bah à plus. Euh, un de mes enfants qui vomit partout à l'école. Euh, c'est appeler pour qu'on aille le rechercher. Donc le visuel, oui, secondaire. Oui. Le
+parce que nous, on a la nécessité de faire un réaher des charges assez rapidement pour qu'on soit tous d'accord et fixé sur la même chose
+et pour qu'on puisse commencer à travailler vraiment Oui, pu de toute façon je pense que vos enseignants, ils demandent le cahier des charges, c'est grand max décembre. Ça je crois c'est faut le rendre grand max avant les vacances de décembre.
+Donc au plus vite
+ça mais plus vite il est fait, plus vite il est validé, plus vite on se met au travail quoi.
+OK. La prochaine étape c'est le télécharge. Tout à fait.
+Ouais. Ah je vous ai donné de quoi quand même.
+Oui oui complètement.
+Mais
+ça va, il est clair, il est pas flou.
+Il vous donne une ligne de conduite quand même.
+Moi juste un moin c'est pour la répartition entre les deux sites. Par exemple, ce qu'on doit mettre du coup sur nos environnement Et sur l'autre par exemple pour tout ce qui est locaux genre si on veut présenter du coup les locaux
+locaux c'est plutôt la réserve.
+OK.
+En fait pourquoi on s'est parlé deux de deux raisons ? La première c'est un environnement bah on imagine il accueillit un autre site comme ça. On sait très bien qu'on le fera pas parce que ça été un bouffant pas possible mais qui s'appellera Truckmuch. Bah il y a truc Much la réserve et de l'environnement qui s'occupe des deux comme une entreprise internationale. Ils ont plusieurs sites et puis nous on veut pas de ça mais bref Euh il y a même des structures associatives en fait qui ont différents sites, ça ça ça existe. Et l'autre aussi chose c'est qu'en fait là c'est un peu plus du juridique mais on se demandait si on allait pas devoir créer une entité juridique la réserve. Dans cette entité, il y aurait eu en fait environnement qui aurait eu, je vais prendre l'exemple, ce sera plus parlant pour vous, environnement qui aurait eu peut-être 70 % départ et puis l'agglomération qui aurait eu départ aussi et cetera. Et pourquoi ça aussi ? Parce que une association en fait euh de dans ses recettes parce qu'elle reçoit comme argent. Admettons, elle son budget annuel c'est 1 million d'euros. Non, c'est 1 million. Il y a que 30 % qui peuvent être seulement issus de leur commercialisation. Vente de légumes, vente de nichoir. On peut pas dépasser ça parce qu'en fait sinon on est considéré comme entreprise classique. Sinon on est de la conférence desloyal pour le pour le en fait tout le reste, les 70 % restant, c'est de la subvention. état, entreprise, ça c'est une obligation avec donc on avait peur en fait que euh justement ça vienne casser tout le notre modèle associatif économique. Donc on a créé ça aurait été de créer une genre ce qu'on appelle une scope en fait. Et donc demain pareil, j'ai l'importance de séparer les deux parce que si jamais ça se crée, bah c'est déjà fait. H euh Euh donc moi j'ai quand même du mal à répondre à ta question. Donc qu'est-ce qui relève parfois du purement la réserve ? Donc les parcours pédal au niveau animation, ce sera la réserve. Là où on a déjà nos animations, euh vous les retrouvez sur le site internet de nos environnements.
+Ce sera les thématiques resteront les mêmes mais ce sera plus forcément la même chose d'aborder. Mais malgré tout, tu vois, on aurait pu imaginer aussi que nos environnement louent des salles de la réserve dans le modèle économique en fait.
+OK.
+Si on avait créé ces deux entités juridiques Du coup, c'est sur la réserve, ça serait là qu' aurait la location des salles et cetera.
+L'achat des paniers, ça serait sur la réserve ou le n environnement.
+C'est de mon point de vue plus n environnement.
+C'est n environnement qui produit et qui fait les paniers mais on vient les chercher à la réserve quoi. Alors tu vois et euh
+OK.
+Événement agenda, c'est la réserve aussi.
+Agendaissal ou Mais les événements euh oui, la réserve aussi parce que ce sera on affichera les événements. Typiquement, on affiche plus d'év en fait c'est pour ça qu'il est pas complété à ce niveau-là, c'est qu'on a fini par les afficher.
+Euh en fait jusqu'à présent, quand on n'y avait pas ce site, euh une commune nous demande un atelier, on a même arrêté de les mettre un peu sur notre Facebook parce qu'en fait la commune veut que ce soit des habitants de leur commune qui viennent à l'atelier.
+OK.
+Euh Euh et donc typiquement si on fait des événements qui seront ici, ce seront pour moi sur le calendrier de la réserve.
+OK.
+Euh ce serait pas logique que ce soit Par contre sur le site de l'environnement, bah il peut très bien faire de la pub pour la réserve.
+OK.
+C'est c'est là où je leur dis, j'ai pas l'info de comment ceux qui nous connaissaient pas jusqu'à présent, s'ils arrivent par la réserve mais qui connaissent pas nos environnement. Faut pas qu'ils oublient tout l'autre panel qui puisse exister quoi.
+Typiquement un enseignant qui se dit bah tiens, je veux faire ma ma classe découverte ou ma sortie de fin d'année. Bah je vais sur le site de la réserve tiens et on peut travailler ça. Mais pourquoi pas qu'il sache qu'on peut aussi intervenir dans sa classe le restant de l'année.
+OK. Et du coup le
+Mais ça c'est environnement.
+OK. Ça les animations directement sur place c'est environnement mais venir ici ça serait la réserve.
+OK.
+C'est le seul moyen que j'arrive à bien caisonner. Il peut y avoir une sorte de pub entre guillemets sur chaque site qui fait la pub de l'autre en mode si vous voulez directement venir sur place bah du coup ça se passe sur la réserve mais si vous voulez que nous on intervienne bah ça se passe sur l' environnement ou
+vous pouvez dire à votre enseignant que vous allez devenir schizophrène.
+OK
+le fait qu'il y en ait deux c'est pas gênant. Non je pense pas
+parce qu'au niveau de l'interface en plus globale pour la côté intuitif ça va être la même chose des deux côtés. H
+je pense Ça rajoute pas énormément dein quoi.
+Non, je pense pas que ça problème.
+C'est plus l'aspect visuel je pense qu' va changer. Ouais, sûrement.
+OK.
+Bah du coup, ce qu'on vous propose c'est on va faire un retour sur ce qui a été dit aujourd'hui et puis s'il y a des choses qu'on a mal compris comprises ou quoi, bah faut pas hésiter à reclairer les choses et puis comme ça on commencera déjà l'écriture. décharge
+et puis euh si ça va.
+Ouais,
+mon mail vous l'avez de toute façon.
+Euh, c'est tout bon.
+Ouais, nickel. Musez-vous bien.
