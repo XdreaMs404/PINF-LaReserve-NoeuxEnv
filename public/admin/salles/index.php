@@ -25,17 +25,12 @@ if ($tab == "modifier_salle") {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Dashboard Réservations</title>
-
+<?php
+$page_title = 'Dashboard Réservations';
+require_once __DIR__ . '/../includes/header.php';
+?>
 <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="container">
+<style>.container { box-shadow: none; margin: 0; max-width: 100%; }</style>
     <div class="header">
             <h1>Demandes de réservation</h1>
             <a href="../index.php" class="btn btn-secondary">Retour Dashboard</a>
@@ -106,20 +101,26 @@ if ($tab == "modifier_salle") {
                             <div class="actions-group">
                                 <?php if ($res['validation'] == 0): ?>
                                     <span class="badge badge-warning">En attente</span>
+                                    <?php if (Auth::hasRole('redacteur')): ?>
                                     <div style="height: 5px;"></div> <a href="index.php?valider_id=<?= $res['id'] ?>&tab=<?= $tab ?>" onclick="return confirm('Confirmer ?');" class="btn btn-success btn-sm">Valider</a>
                                     <a href="index.php?refuser_id=<?= $res['id'] ?>&tab=<?= $tab ?>" onclick="return confirm('Refuser ?');" class="btn btn-danger btn-sm">Refuser</a>
+                                    <?php endif; ?>
 
                                 <?php elseif ($res['validation'] == 1): ?>
                                     <span class="badge badge-success">Confirmée</span>
+                                    <?php if (Auth::hasRole('redacteur')): ?>
                                     <div style="height: 5px;"></div>
                                     <a href="index.php?retablir_id=<?= $res['id'] ?>&tab=<?= $tab ?>" class="btn btn-secondary btn-sm">En attente</a>
                                     <a href="index.php?supprimer_id=<?= $res['id'] ?>&tab=<?= $tab ?>" onclick="return confirm('Supprimer définitivement ?');" class="btn btn-danger btn-sm" style="background: #fecaca; color: #991b1b;">Supprimer</a>
+                                    <?php endif; ?>
 
                                 <?php elseif ($res['validation'] == -1): ?>
                                     <span class="badge badge-danger">Refusée</span>
+                                    <?php if (Auth::hasRole('redacteur')): ?>
                                     <div style="height: 5px;"></div>
                                     <a href="index.php?retablir_id=<?= $res['id'] ?>&tab=<?= $tab ?>" class="btn btn-secondary btn-sm">En attente</a>
                                     <a href="index.php?supprimer_id=<?= $res['id'] ?>&tab=<?= $tab ?>" onclick="return confirm('Supprimer ?');" class="btn btn-danger btn-sm">Supprimer définitivement</a>
+                                    <?php endif; ?>
                                 <?php endif; ?>
                             </div>
                         </td>
@@ -137,9 +138,11 @@ if ($tab == "modifier_salle") {
 </div>
 
 
+
     <br>
     <br>
-    <h2>Gestion des créneaux</h2>
+    <?php if (Auth::hasRole('redacteur')): ?>
+        <h2>Gestion des créneaux</h2>
         <div class="admin-card">
     <h3>➕ Créer un créneau</h3>
 
@@ -365,12 +368,9 @@ if ($tab == "modifier_salle") {
                 <input type="file" name="image_salle" accept="image/*" class="input-admin">
             </div>
 
-            <button type="submit" name="action" value="creer_salle" class="btn btn-success btn-sm" >
-                Ajouter la salle
             </button>
         </form>
-    <?php endif; ?>
+    <?php endif; ?> <!-- Possible preexisting endif -->
+    <?php endif; ?> <!-- Closures for the Auth redacteur block -->
 </div>
-
-</body>
-</html>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

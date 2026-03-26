@@ -5,6 +5,9 @@ require_once __DIR__ . '/../../../config/bootstrap.php';
 Auth::requireRole('lecteur');
 
 $siteId = isset($_GET['site_id']) ? (int) $_GET['site_id'] : null;
+$selectForPage = isset($_GET['select_for_page']) ? (int)$_GET['select_for_page'] : null;
+$selectBlocId = isset($_GET['bloc_id']) ? (int)$_GET['bloc_id'] : null;
+
 $page = isset($_GET['page']) ? max(1, (int) $_GET['page']) : 1;
 $perPage = 20;
 $offset = ($page - 1) * $perPage;
@@ -36,120 +39,45 @@ $totalPages = ceil($total / $perPage);
 
 $canEdit = Auth::hasRole('redacteur'); // Admin est inclus car admin > redacteur
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Gestion des Médias - La Réserve</title>
-    <link rel="stylesheet" href="/reserve/css/style.css">
-    <style>
-        .media-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .media-item {
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 8px;
-            background: white;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .media-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .media-item img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .media-info {
-            font-size: 0.85em;
-            color: #555;
-            margin: 10px 0;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .media-actions {
-            margin-top: auto;
-            border-top: 1px solid #eee;
-            padding-top: 10px;
-        }
-
-        .pagination {
-            margin-top: 30px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-        }
-
-        .pagination a {
-            display: inline-block;
-            padding: 5px 10px;
-            border: 1px solid #ddd;
-            color: #333;
-            text-decoration: none;
-            border-radius: 3px;
-        }
-
-        .pagination a.active {
-            background-color: #333;
-            color: white;
-            border-color: #333;
-        }
-
-        .filters {
-            margin-bottom: 25px;
-            padding: 15px;
-            background: #fff;
-            border-radius: 4px;
-            border-left: 4px solid #333;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
-        .filters a {
-            text-decoration: none;
-            color: #333;
-            margin: 0 5px;
-            font-weight: 500;
-        }
-
-        .filters a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="admin-panel" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+<?php
+$page_title = 'Gestion des Médias - Admin';
+require_once __DIR__ . '/../includes/header.php';
+?>
+<style>
+    .media-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+    .media-item { border: 1px solid #ddd; padding: 10px; border-radius: 8px; background: white; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+    .media-item:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); border-color:#2E7D32; }
+    .media-item img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; cursor: pointer; }
+    .media-info { font-size: 0.85em; color: #555; margin: 10px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .media-actions { margin-top: auto; border-top: 1px solid #eee; padding-top: 10px; }
+    .pagination { margin-top: 30px; text-align: center; display: flex; justify-content: center; gap: 5px; }
+    .pagination a { display: inline-block; padding: 5px 10px; border: 1px solid #ddd; color: #333; text-decoration: none; border-radius: 3px; }
+    .pagination a.active { background-color: #333; color: white; border-color: #333; }
+    .filters { margin-bottom: 25px; padding: 15px; background: #fff; border-radius: 4px; border-left: 4px solid #333; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .filters a { text-decoration: none; color: #333; margin: 0 5px; font-weight: 500; }
+    .filters a:hover { text-decoration: underline; }
+</style>
         <div style="display:flex; justify-content:space-between; align-items:center;">
             <h1>Médiathèque</h1>
-            <a href="../index.php">Retour Dashboard</a>
+            <?php if ($selectForPage): ?>
+                <a href="/admin/pages/editer.php?id=<?= $selectForPage ?>#bloc-<?= $selectBlocId ?>" class="btn btn-secondary">Annuler la sélection</a>
+            <?php else: ?>
+                <a href="../index.php" class="btn btn-secondary">Retour Dashboard</a>
+            <?php endif; ?>
         </div>
+
+        <?php if ($selectForPage && $selectBlocId): ?>
+            <div class="alert" style="background:#fff3cd; color:#856404; border:1px solid #ffeeba;">
+                <strong>Mode sélection :</strong> Cliquez sur "Choisir cette image" ci-dessous pour l'associer à votre bloc de page. <br>
+            </div>
+        <?php endif; ?>
 
         <div class="filters">
             Filtrer par site :
-            <a href="?">Tous</a> |
-            <a href="?site_id=1">Nœux Environnement</a> |
-            <a href="?site_id=2">La Réserve</a>
+            <?php $selectParams = $selectForPage ? "&select_for_page=$selectForPage&bloc_id=$selectBlocId" : ""; ?>
+            <a href="?<?= ltrim($selectParams, '&') ?>">Tous</a> |
+            <a href="?site_id=1<?= $selectParams ?>">Nœux Environnement</a> |
+            <a href="?site_id=2<?= $selectParams ?>">La Réserve</a>
         </div>
 
         <?php if ($canEdit): ?>
@@ -199,7 +127,17 @@ $canEdit = Auth::hasRole('redacteur'); // Admin est inclus car admin > redacteur
                     <div class="media-info" title="<?= htmlspecialchars($originalName) ?>">
                         <?= htmlspecialchars($originalName) ?>
                     </div>
-                    <?php if ($canEdit && $mediaId): ?>
+                    <?php if ($selectForPage && $selectBlocId): ?>
+                        <div class="media-actions">
+                            <form action="/admin/pages/update_image_bloc.php" method="POST" style="margin:0;">
+                                <input type="hidden" name="csrf_token" value="<?= Csrf::token() ?>">
+                                <input type="hidden" name="page_id" value="<?= $selectForPage ?>">
+                                <input type="hidden" name="bloc_id" value="<?= $selectBlocId ?>">
+                                <input type="hidden" name="media_id" value="<?= $mediaId ?>">
+                                <button type="submit" class="btn btn-primary" style="width:100%; border-radius:4px; padding:6px; font-size:14px; cursor:pointer;">Sélectionner</button>
+                            </form>
+                        </div>
+                    <?php elseif ($canEdit && $mediaId): ?>
                         <div class="media-actions">
                             <form action="supprimer.php" method="post"
                                 onsubmit="return confirm('Confirmer la suppression définitive ?');">
@@ -223,7 +161,4 @@ $canEdit = Auth::hasRole('redacteur'); // Admin est inclus car admin > redacteur
                 <?php endfor; ?>
             </div>
         <?php endif; ?>
-    </div>
-</body>
-
-</html>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

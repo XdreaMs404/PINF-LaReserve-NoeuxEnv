@@ -25,139 +25,10 @@ $stmt->execute($params);
 $users = $stmt->fetchAll();
 
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Gestion des utilisateurs - La Réserve</title>
-    <link rel="stylesheet" href="/reserve/css/style.css">
-    <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: sans-serif;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 8px 15px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-danger {
-            background: #fee2e2;
-            color: #b91c1c;
-            border: 1px solid #fecaca;
-        }
-
-        .btn-secondary {
-            background: #f1f5f9;
-            color: #475569;
-            border: 1px solid #cbd5e1;
-        }
-
-        .btn-warning {
-            background: #f0f9ff;
-            color: #0284c7;
-            border: 1px solid #bae6fd;
-        }
-
-        .alert {
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-        }
-
-        .alert-success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        .table th,
-        .table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .table th {
-            background: #f8f9fa;
-        }
-
-        .badge {
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.9em;
-        }
-
-        .badge-admin {
-            background: #6f42c1;
-            color: white;
-        }
-
-        .badge-redac {
-            background: #17a2b8;
-            color: white;
-        }
-
-        .badge-lect {
-            background: #28a745;
-            color: white;
-        }
-
-        .badge-user {
-            background: #6c757d;
-            color: white;
-        }
-
-        .search-form {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .search-form input {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            flex-grow: 1;
-            max-width: 300px;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
+<?php
+$page_title = 'Gestion des utilisateurs - Admin';
+require_once __DIR__ . '/../includes/header.php';
+?>
         <div class="header">
             <h1>Gestion des utilisateurs</h1>
             <div>
@@ -243,7 +114,4 @@ $users = $stmt->fetchAll();
                 <?php endif; ?>
             </tbody>
         </table>
-    </div>
-</body>
-
-</html>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

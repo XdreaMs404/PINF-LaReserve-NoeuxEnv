@@ -7,6 +7,30 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php") {
 require_once __DIR__ . '/../../../config/bootstrap.php';
 use Services\Mailer;
 
+// --- DÉBUT RÉCUPÉRATION DES BLOCS DE PAGE ---
+// 1. Connexion à la base de données
+$pdo = Database::getConnection();
+
+// 2. L'ID de la page "Contact" est 10
+$page_id = 10;
+
+// 3. On récupère TOUS les blocs de cette page
+$stmt = $pdo->prepare("
+    SELECT b.*, m.chemin_fichier, m.texte_alt
+    FROM blocs_page b 
+    LEFT JOIN medias m ON b.media_publie_id = m.id 
+    WHERE b.page_id = :page_id
+");
+$stmt->execute(['page_id' => $page_id]);
+$resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// 4. On réorganise les résultats par leur nom (titre_publie)
+$blocs = [];
+foreach ($resultats as $row) {
+    $blocs[$row['titre_publie']] = $row;
+}
+// --- FIN RÉCUPÉRATION ---
+
 $selected_subject = isset($_GET['subject']) ? $_GET['subject'] : '';
 $feedback = '';
 $feedback_type = ''; // 'success' or 'error'
@@ -194,50 +218,49 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </style>
 
 
-<!-- En-tête de la page -->
 <section class="page-header"
-    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/equipe_noeux_environnement.jpg');">
-    <h1>Contact & Venir</h1>
+    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<?= htmlspecialchars($blocs['banniere_image']['chemin_fichier'] ?? 'assets/images/equipe_noeux_environnement.jpg') ?>');">
+    <h1><?= $blocs['banniere_titre']['contenu_texte_publie'] ?? 'Contact & Venir' ?></h1>
 </section>
 
-<!-- Le contenu principal -->
 <main class="container">
-    <!-- Section 1 : Pourquoi nous contacter ? -->
     <section class="content-section" style="text-align: center;">
-        <h2 class="section-title">Pourquoi souhaitez-vous nous contacter ?</h2>
-        <p>Cliquez sur l'un des sujets ci-dessous pour accéder directement au formulaire correspondant.</p>
+        <h2 class="section-title"><?= $blocs['sujets_titre']['contenu_texte_publie'] ?? 'Pourquoi souhaitez-vous nous contacter ?' ?></h2>
+        
+        <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto; margin-bottom: 2rem;">
+            <?= $blocs['intro']['contenu_texte_publie'] ?? 'Cliquez sur l\'un des sujets ci-dessous pour accéder directement au formulaire correspondant.' ?>
+        </p>
 
         <div class="subject-cards">
             <div class="subject-card" data-subject="general" onclick="selectSujet('general')">
-                <h3>Question générale</h3>
-                <p>Infos pratiques, horaires, projets...</p>
+                <h3><?= $blocs['carte1_titre']['contenu_texte_publie'] ?? 'Question générale' ?></h3>
+                <p><?= $blocs['carte1_texte']['contenu_texte_publie'] ?? 'Infos pratiques, horaires, projets...' ?></p>
             </div>
             <div class="subject-card" data-subject="animation_exterieure" onclick="selectSujet('animation_exterieure')">
-                <h3>Animation à l’extérieur</h3>
-                <p>Demander une intervention dans votre structure ou sur un site naturel.</p>
+                <h3><?= $blocs['carte2_titre']['contenu_texte_publie'] ?? 'Animation à l’extérieur' ?></h3>
+                <p><?= $blocs['carte2_texte']['contenu_texte_publie'] ?? 'Demander une intervention dans votre structure ou sur un site naturel.' ?></p>
             </div>
             <div class="subject-card" data-subject="visite_reserve"
                 onclick="window.location.href='/reserve/index.php?view=contact&subject=visite'">
-                <h3>Visite à La Réserve</h3>
-                <p>Organiser une visite ou une animation sur notre écolieu.</p>
+                <h3><?= $blocs['carte3_titre']['contenu_texte_publie'] ?? 'Visite à La Réserve' ?></h3>
+                <p><?= $blocs['carte3_texte']['contenu_texte_publie'] ?? 'Organiser une visite ou une animation sur notre écolieu.' ?></p>
             </div>
             <div class="subject-card" data-subject="partenariat" onclick="selectSujet('partenariat')">
-                <h3>Partenariat / Financement</h3>
-                <p>Proposer un projet commun ou soutenir nos actions.</p>
+                <h3><?= $blocs['carte4_titre']['contenu_texte_publie'] ?? 'Partenariat / Financement' ?></h3>
+                <p><?= $blocs['carte4_texte']['contenu_texte_publie'] ?? 'Proposer un projet commun ou soutenir nos actions.' ?></p>
             </div>
             <div class="subject-card" data-subject="candidature" onclick="selectSujet('candidature')">
-                <h3>Candidature / Bénévolat</h3>
-                <p>Rejoindre nos équipes ou devenir bénévole.</p>
+                <h3><?= $blocs['carte5_titre']['contenu_texte_publie'] ?? 'Candidature / Bénévolat' ?></h3>
+                <p><?= $blocs['carte5_texte']['contenu_texte_publie'] ?? 'Rejoindre nos équipes ou devenir bénévole.' ?></p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Grid -->
     <section class="content-section">
         <div class="contact-grid">
-            <!-- Formulaire -->
             <div class="contact-form-container" id="form-contact">
-                <h2>Votre message</h2>
+                <h2><?= $blocs['infos_pratiques_titre']['contenu_texte_publie'] ?? 'Votre message' ?></h2>
+                <p style="margin-bottom: 1.5rem; font-style: italic; color: #666;"><?= $blocs['infos_pratiques_texte']['contenu_texte_publie'] ?? '' ?></p>
 
                 <?php if ($feedback): ?>
                     <div class="feedback <?= $feedback_type ?>"
@@ -251,22 +274,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="form-group">
                         <label for="sujet">Sujet de la demande</label>
                         <select id="sujet" name="sujet" onchange="updateFormBySujet(this.value)">
-                            <option value="general" <?php echo ($selected_subject == 'general') ? 'selected' : ''; ?>>
-                                Question générale</option>
+                            <option value="general" <?php echo ($selected_subject == 'general') ? 'selected' : ''; ?>>Question générale</option>
                             <option value="animation_exterieure" <?php echo ($selected_subject == 'animation_exterieure') ? 'selected' : ''; ?>>Animation à l'extérieur</option>
                             <option value="partenariat" <?php echo ($selected_subject == 'partenariat') ? 'selected' : ''; ?>>Partenariat / Financement</option>
                             <option value="candidature" <?php echo ($selected_subject == 'candidature') ? 'selected' : ''; ?>>Candidature / Bénévolat</option>
-                            <option value="autre" <?php echo ($selected_subject == 'autre') ? 'selected' : ''; ?>>Autre
-                            </option>
+                            <option value="autre" <?php echo ($selected_subject == 'autre') ? 'selected' : ''; ?>>Autre</option>
                         </select>
                     </div>
 
-                    <!-- Champs conditionnels pour l'animation extérieure -->
                     <div id="extra-fields">
                         <div class="form-group">
                             <label for="lieu">Lieu de l'animation souhaité</label>
-                            <input type="text" id="lieu" name="lieu"
-                                placeholder="Ex: École de l'Artois, parc communal...">
+                            <input type="text" id="lieu" name="lieu" placeholder="Ex: École de l'Artois, parc communal...">
                         </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                             <div class="form-group">
@@ -280,10 +299,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                     </div>
 
-                    <!-- BLOC BÉNÉVOLE -->
                     <section id="bloc-benevole">
-                        <p style="margin-bottom: 1rem; font-style: italic;">Merci de remplir ces informations pour nous
-                            aider à mieux vous connaître.</p>
+                        <p style="margin-bottom: 1rem; font-style: italic;">Merci de remplir ces informations pour nous aider à mieux vous connaître.</p>
 
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                             <div class="form-group">
@@ -315,33 +332,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="form-group">
                             <label>Vos savoir-faire</label>
                             <div class="checkbox-group">
-                                <label class="checkbox-item"><input type="checkbox" name="benevole_savoirfaire[]"
-                                        value="Naturaliste"> Naturaliste</label>
-                                <label class="checkbox-item"><input type="checkbox" name="benevole_savoirfaire[]"
-                                        value="Communication"> Communication / Événementiel</label>
-                                <label class="checkbox-item"><input type="checkbox" name="benevole_savoirfaire[]"
-                                        value="Bricolage"> Bricolage</label>
-                                <label class="checkbox-item"><input type="checkbox" name="benevole_savoirfaire[]"
-                                        value="Transmission"> Transmettre des savoirs</label>
-                                <label class="checkbox-item"><input type="checkbox" name="benevole_savoirfaire[]"
-                                        value="Artistique"> Artistique</label>
+                                <label class="checkbox-item"><input type="checkbox" name="benevole_savoirfaire[]" value="Naturaliste"> Naturaliste</label>
+                                <label class="checkbox-item"><input type="checkbox" name="benevole_savoirfaire[]" value="Communication"> Communication / Événementiel</label>
+                                <label class="checkbox-item"><input type="checkbox" name="benevole_savoirfaire[]" value="Bricolage"> Bricolage</label>
+                                <label class="checkbox-item"><input type="checkbox" name="benevole_savoirfaire[]" value="Transmission"> Transmettre des savoirs</label>
+                                <label class="checkbox-item"><input type="checkbox" name="benevole_savoirfaire[]" value="Artistique"> Artistique</label>
                             </div>
-                            <input type="text" name="benevole_savoirfaire_autre" placeholder="Autres savoir-faire..."
-                                style="margin-top: 0.5rem;">
+                            <input type="text" name="benevole_savoirfaire_autre" placeholder="Autres savoir-faire..." style="margin-top: 0.5rem;">
                         </div>
 
                         <div class="form-group">
                             <label>Nos savoir-faire et vos envies</label>
                             <div class="checkbox-group">
-                                <label class="checkbox-item"><input type="checkbox" name="benevole_envies[]"
-                                        value="Social"> Social (ateliers numériques, CV...)</label>
-                                <label class="checkbox-item"><input type="checkbox" name="benevole_envies[]"
-                                        value="Ecocitoyennete"> Écocitoyenneté (stands, animations)</label>
-                                <label class="checkbox-item"><input type="checkbox" name="benevole_envies[]"
-                                        value="Environnement"> Environnement (chantiers, jardinage)</label>
+                                <label class="checkbox-item"><input type="checkbox" name="benevole_envies[]" value="Social"> Social (ateliers numériques, CV...)</label>
+                                <label class="checkbox-item"><input type="checkbox" name="benevole_envies[]" value="Ecocitoyennete"> Écocitoyenneté (stands, animations)</label>
+                                <label class="checkbox-item"><input type="checkbox" name="benevole_envies[]" value="Environnement"> Environnement (chantiers, jardinage)</label>
                             </div>
-                            <input type="text" name="benevole_envies_autre" placeholder="Autres envies..."
-                                style="margin-top: 0.5rem;">
+                            <input type="text" name="benevole_envies_autre" placeholder="Autres envies..." style="margin-top: 0.5rem;">
                         </div>
                     </section>
 
@@ -371,29 +378,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </form>
             </div>
 
-            <!-- Infos & Accès -->
             <div class="contact-info">
                 <div
                     style="background-color: var(--white); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: var(--shadow);">
-                    <h3>Coordonnées</h3>
-                    <p><strong>Téléphone :</strong> 03 21 66 37 74</p>
-                    <p><strong>Email :</strong> contact@noeuxenvironnement.fr </p>
-                    <p><strong>Adresse :</strong><br>La Réserve – Nœux Environnement<br>22 bis rue
-                        Nationale<br>62290 Nœux-les-Mines</p>
+                    <h3><?= $blocs['coordonnees_titre']['contenu_texte_publie'] ?? 'Coordonnées' ?></h3>
+                    <p><strong>Téléphone :</strong> <?= $blocs['coordonnees_tel']['contenu_texte_publie'] ?? '03 21 66 37 74' ?></p>
+                    <p><strong>Email :</strong> <?= $blocs['coordonnees_email']['contenu_texte_publie'] ?? 'contact@noeuxenvironnement.fr' ?></p>
+                    <p><strong>Adresse :</strong><br><?= $blocs['coordonnees_adresse']['contenu_texte_publie'] ?? 'La Réserve – Nœux Environnement<br>22 bis rue Nationale<br>62290 Nœux-les-Mines' ?></p>
+                    <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
+                        <strong>Horaires :</strong><br>
+                        <?= $blocs['horaires']['contenu_texte_publie'] ?? 'L’association est ouverte du lundi au jeudi de 9h00 à 17h00 et le vendredi de 9h00 à 16h00.' ?>
+                    </p>
                 </div>
 
                 <div
                     style="background-color: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);">
-                    <h3>Venir à La Réserve</h3>
-                    <p>La Réserve est le lieu d’accueil principal de Nœux Environnement.</p>
+                    <h3><?= $blocs['acces_titre']['contenu_texte_publie'] ?? 'Venir à La Réserve' ?></h3>
+                    <p><?= $blocs['acces_intro']['contenu_texte_publie'] ?? 'La Réserve est le lieu d’accueil principal de Nœux Environnement.' ?></p>
                     <ul style="list-style-type: disc; padding-left: 1.5rem; margin-top: 1rem;">
-                        <li><strong>En voiture :</strong> stationnement possible à proximité.</li>
-                        <li><strong>En transports :</strong> lignes de bus à proximité.</li>
-                        <li><strong>Par téléphone :</strong> 03 21 66 37 74</li>
+                        <li><?= $blocs['acces_voiture']['contenu_texte_publie'] ?? '<strong>En voiture :</strong> stationnement possible à proximité.' ?></li>
+                        <li><?= $blocs['acces_bus']['contenu_texte_publie'] ?? '<strong>En transports :</strong> lignes de bus à proximité.' ?></li>
                     </ul>
-                    <!-- Intégration Carte Google Maps -->
                     <div style="width: 100%; height: 250px; margin-top: 1rem; border-radius: 4px; overflow: hidden; box-shadow: var(--shadow);">
-                        <iframe width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=22%20bis%20Rue%20Nationale,%2062290%20Noeux-les-Mines&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                        <?= $blocs['acces_iframe_map']['contenu_texte_publie'] ?? '<iframe width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=22%20bis%20Rue%20Nationale,%2062290%20Noeux-les-Mines&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>' ?>
                     </div>
                 </div>
             </div>

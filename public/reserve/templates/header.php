@@ -35,7 +35,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php") {
                 <li><a href="index.php?view=agenda">Agenda</a></li>
                 <li><a href="index.php?view=contact">Contact</a></li>
             </ul>
-            <a href="/noeux/index.php?view=accueil" class="btn-back">Retour Nœux Environnement</a>
+            <a href="../noeux/index.php?view=accueil" class="btn-back">Retour Nœux Environnement</a>
 
         </nav>
     </header>

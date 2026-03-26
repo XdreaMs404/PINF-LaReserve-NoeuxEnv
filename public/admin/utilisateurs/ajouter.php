@@ -50,77 +50,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Ajouter un utilisateur - Admin</title>
-    <link rel="stylesheet" href="/reserve/css/style.css">
-    <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: sans-serif;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .btn {
-            padding: 10px 15px;
-            background: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .btn-secondary {
-            background: #6c757d;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .alert-danger {
-            background: #f8d7da;
-            color: #721c24;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 15px;
-            border: 1px solid #f5c6cb;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
+<?php
+$page_title = 'Ajouter un utilisateur - Admin';
+require_once __DIR__ . '/../includes/header.php';
+?>
         <h1>Ajouter un utilisateur</h1>
 
         <?php if ($error): ?>
@@ -164,7 +97,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="btn">Créer l'utilisateur</button>
             <a href="index.php" class="btn btn-secondary">Annuler</a>
         </form>
-    </div>
-</body>
-
-</html>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

@@ -7,7 +7,15 @@ Des fonctions sont déjà présentes : vous avez le droit de les modifier ou d'e
 */
 
 include_once("maLibSQL.pdo.php");
-include_once "maLibUtils.php";
+include_once("maLibUtils.php");
+
+// Protection des actions
+if (valider("valider_id") || valider("refuser_id") || valider("supprimer_id") || valider("retablir_id") || valider("action")) {
+    if (!Auth::hasRole('redacteur')) {
+        header("Location: index.php?tab=" . (valider("tab") ?: 'en_cours') . "&msg=" . urlencode("Action non autorisée pour votre rôle."));
+        exit();
+    }
+}
 
 //*** Il est recommandé de ne pas modifier les fonctions suivantes, utilisées pour l'identification ***
 

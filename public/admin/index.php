@@ -51,11 +51,11 @@ $user = Auth::user();
         <div class="content">
             <p>Ceci est l'espace d'administration protégé.</p>
             <ul>
-                <li><a href="#">Gérer les pages</a></li>
-                <li><a href="medias/index.php">Gérer les médias</a></li>
-                <li><a href="salles/index.php">Gérer les réservations de salles</a></li>
+                <li><a href="/admin/cms/index.php">Gérer les pages</a></li>
+                <li><a href="/admin/medias/index.php">Gérer les médias</a></li>
+                <li><a href="/admin/salles/index.php">Gérer les réservations de salles</a></li>
                 <?php if (Auth::hasRole('administrateur')): ?>
-                    <li><a href="utilisateurs/index.php">Gérer les utilisateurs</a></li>
+                    <li><a href="/admin/utilisateurs/index.php">Gérer les utilisateurs</a></li>
                 <?php endif; ?>
             </ul>
         </div>

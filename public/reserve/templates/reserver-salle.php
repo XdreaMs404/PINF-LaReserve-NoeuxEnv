@@ -39,6 +39,30 @@ foreach ($rowsCreneaux as $row) {
         'fin' => $row['fin']
     ];
 }
+
+// --- DÉBUT RÉCUPÉRATION DES BLOCS DE PAGE ---
+// 1. Connexion à la base de données
+$pdo = Database::getConnection();
+
+// 2. L'ID de la page "Réserver une salle" (La Réserve) est 18
+$page_id = 18;
+
+// 3. On récupère TOUS les blocs de cette page
+$stmt = $pdo->prepare("
+    SELECT b.*, m.chemin_fichier, m.texte_alt 
+    FROM blocs_page b 
+    LEFT JOIN medias m ON b.media_publie_id = m.id 
+    WHERE b.page_id = :page_id
+");
+$stmt->execute(['page_id' => $page_id]);
+$resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// 4. On réorganise les résultats par leur nom (titre_publie)
+$blocs = [];
+foreach ($resultats as $row) {
+    $blocs[$row['titre_publie']] = $row;
+}
+// --- FIN RÉCUPÉRATION ---
 ?>
 
 <?php if ($msg = valider("msg", "GET")): ?>
@@ -56,25 +80,19 @@ foreach ($rowsCreneaux as $row) {
 
 
 
-    <!-- Hero Section -->
-    <section class="hero" style="background-image: url('assets/images/salle_reunion.jpg');">
+    <section class="hero" style="background-image: url('<?= htmlspecialchars($blocs['hero_image']['chemin_fichier'] ?? 'assets/images/salle_reunion.jpg') ?>');">
         <div class="hero-content">
-            <h1>Réserver une salle à La Réserve</h1>
-            <p>La Réserve dispose de plusieurs salles et espaces qui peuvent accueillir vos réunions, ateliers,
-                formations ou journées d’équipe.</p>
-            <p>Nous mettons ces espaces à disposition des associations, collectivités, structures sociales, organismes
-                de formation et entreprises, dans la mesure des disponibilités du lieu.</p>
-            
+            <h1><?= $blocs['hero_titre']['contenu_texte_publie'] ?? 'Réserver une salle à La Réserve' ?></h1>
+            <p><?= $blocs['hero_paragraphe_1']['contenu_texte_publie'] ?? 'La Réserve dispose de plusieurs salles et espaces qui peuvent accueillir vos réunions, ateliers, formations ou journées d’équipe.' ?></p>
+            <p><?= $blocs['hero_paragraphe_2']['contenu_texte_publie'] ?? 'Nous mettons ces espaces à disposition des associations, collectivités, structures sociales, organismes de formation et entreprises, dans la mesure des disponibilités du lieu.' ?></p>
         </div>
     </section>
     
 
-    <!-- Main Content -->
     <main class="container">
 
-        <!-- Section 1: Les salles disponibles -->
         <section class="content-section">
-    <h2 class="section-title">Les espaces à votre disposition</h2>
+    <h2 class="section-title"><?= $blocs['salles_titre']['contenu_texte_publie'] ?? 'Les espaces à votre disposition' ?></h2>
     <div class="grid-3">
         <?php foreach ($salles as $salle): ?>
             <div class="card" style="display: flex; flex-direction: column;">
@@ -100,85 +118,76 @@ foreach ($rowsCreneaux as $row) {
             </div>
         <?php endforeach; ?>
     </div>
-    <p style="text-align: center; margin-top: 2rem;">Lors de votre demande, nous vous aidons à choisir la salle la plus adaptée à votre événement.</p>
+    <p style="text-align: center; margin-top: 2rem;"><?= $blocs['salles_footer']['contenu_texte_publie'] ?? 'Lors de votre demande, nous vous aidons à choisir la salle la plus adaptée à votre événement.' ?></p>
 </section>
 
-        <!-- Section 2: Idées d'usages -->
         <section class="content-section" style="background-color: var(--white);">
             <div class="text-image-block">
                 <div class="text-content">
-                    <h2>Pour quels types de projets ?</h2>
-                    <p>Les salles de La Réserve peuvent accueillir par exemple :</p>
+                    <h2><?= $blocs['projets_titre']['contenu_texte_publie'] ?? 'Pour quels types de projets ?' ?></h2>
+                    <p><?= $blocs['projets_intro']['contenu_texte_publie'] ?? 'Les salles de La Réserve peuvent accueillir par exemple :' ?></p>
                     <ul style="list-style: disc; margin-left: 1.5rem; margin-top: 1rem;">
-                        <li>des réunions d’équipe ou de coordination,</li>
-                        <li>des journées de formation ou de sensibilisation à la transition,</li>
-                        <li>des journées d’étude ou séminaires avec temps en salle + visite du site,</li>
-                        <li>des ateliers participatifs avec des habitants ou des partenaires,</li>
-                        <li>des événements associatifs (AG, rencontres, temps conviviaux)</li>
-                        <li>des séminaires d’entreprise autour de la RSE, du climat, de la biodiversité…</li>
+                        <li><?= $blocs['projets_li_1']['contenu_texte_publie'] ?? 'des réunions d’équipe ou de coordination,' ?></li>
+                        <li><?= $blocs['projets_li_2']['contenu_texte_publie'] ?? 'des journées de formation ou de sensibilisation à la transition,' ?></li>
+                        <li><?= $blocs['projets_li_3']['contenu_texte_publie'] ?? 'des journées d’étude ou séminaires avec temps en salle + visite du site,' ?></li>
+                        <li><?= $blocs['projets_li_4']['contenu_texte_publie'] ?? 'des ateliers participatifs avec des habitants ou des partenaires,' ?></li>
+                        <li><?= $blocs['projets_li_5']['contenu_texte_publie'] ?? 'des événements associatifs (AG, rencontres, temps conviviaux)' ?></li>
+                        <li><?= $blocs['projets_li_6']['contenu_texte_publie'] ?? 'des séminaires d’entreprise autour de la RSE, du climat, de la biodiversité…' ?></li>
                     </ul>
                     <div
                         style="margin-top: 2rem; padding: 1.5rem; background-color: var(--background-color); border-left: 5px solid var(--accent-color); border-radius: 4px;">
-                        <p><strong>Si vous le souhaitez, nous pouvons aussi vous proposer :</strong></p>
+                        <p><strong><?= $blocs['projets_encart_titre']['contenu_texte_publie'] ?? 'Si vous le souhaitez, nous pouvons aussi vous proposer :' ?></strong></p>
                         <ul style="list-style: disc; margin-left: 1.5rem;">
-                            <li>une visite guidée du site,</li>
-                            <li>un atelier nature, jardin ou alimentation animé par Nœux Environnement,</li>
+                            <li><?= $blocs['projets_encart_li_1']['contenu_texte_publie'] ?? 'une visite guidée du site,' ?></li>
+                            <li><?= $blocs['projets_encart_li_2']['contenu_texte_publie'] ?? 'un atelier nature, jardin ou alimentation animé par Nœux Environnement,' ?></li>
                         </ul>
-                        <p>en complément de votre temps en salle.</p>
+                        <p><?= $blocs['projets_encart_footer']['contenu_texte_publie'] ?? 'en complément de votre temps en salle.' ?></p>
                     </div>
                 </div>
                 <div class="image-content">
-                    <img src="assets/images/plan_vue_de_haut_locaux.jpg" alt="Vue de haut des locaux">
+                    <img src="<?= htmlspecialchars($blocs['projets_image']['chemin_fichier'] ?? 'assets/images/plan_vue_de_haut_locaux.jpg') ?>" 
+                         alt="<?= htmlspecialchars($blocs['projets_image']['texte_alt'] ?? 'Vue de haut des locaux') ?>">
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Comment réserver -->
         <section class="content-section">
-            <h2 class="section-title">Comment réserver une salle ?</h2>
+            <h2 class="section-title"><?= $blocs['comment_titre']['contenu_texte_publie'] ?? 'Comment réserver une salle ?' ?></h2>
             <div class="grid-3">
                 <div class="card">
-                    <h3>Étape 1 – Faire une demande</h3>
-                    <p>Vous remplissez le formulaire en cliquant sur "Réserver cette salle" ci-dessus.</p>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Merci d'ajouter des précisions en cas de demande ou de besoin particulier.</p>
+                    <h3><?= $blocs['etape1_titre']['contenu_texte_publie'] ?? 'Étape 1 – Faire une demande' ?></h3>
+                    <p><?= $blocs['etape1_texte']['contenu_texte_publie'] ?? 'Vous remplissez le formulaire en cliquant sur "Réserver cette salle" ci-dessus.' ?></p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;"><?= $blocs['etape1_subtexte']['contenu_texte_publie'] ?? 'Merci d\'ajouter des précisions en cas de demande ou de besoin particulier.' ?></p>
                 </div>
                 <div class="card">
-                    <h3>Étape 2 – Validation et confirmation</h3>
-                    <p>L’équipe de La Réserve vous répond pour vérifier les disponibilités et ajuster la configuration.
-                        Si tout est OK, nous vous envoyons un récapitulatif par mail.</p>
+                    <h3><?= $blocs['etape2_titre']['contenu_texte_publie'] ?? 'Étape 2 – Validation et confirmation' ?></h3>
+                    <p><?= $blocs['etape2_texte']['contenu_texte_publie'] ?? 'L’équipe de La Réserve vous répond pour vérifier les disponibilités et ajuster la configuration. Si tout est OK, nous vous envoyons un récapitulatif par mail.' ?></p>
                 </div>
                 <div class="card">
-                    <h3>Étape 3 – Règlement via Trello</h3>
-                    <p>Pour finaliser, vous recevez un lien externe Trello pour accéder à votre dossier et effectuer le
-                        paiement en ligne sécurisé.</p>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Une fois validé, la réservation est confirmée.</p>
+                    <h3><?= $blocs['etape3_titre']['contenu_texte_publie'] ?? 'Étape 3 – Règlement via Trello' ?></h3>
+                    <p><?= $blocs['etape3_texte']['contenu_texte_publie'] ?? 'Pour finaliser, vous recevez un lien externe Trello pour accéder à votre dossier et effectuer le paiement en ligne sécurisé.' ?></p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;"><?= $blocs['etape3_subtexte']['contenu_texte_publie'] ?? 'Une fois validé, la réservation est confirmée.' ?></p>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: #666;">🔒 Le paiement est géré via
-                Trello sur un espace sécurisé externe. Aucune donnée bancaire n’est stockée sur le site de La Réserve.
+            <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: #666;">
+                <?= $blocs['comment_footer']['contenu_texte_publie'] ?? '🔒 Le paiement est géré via Trello sur un espace sécurisé externe. Aucune donnée bancaire n’est stockée sur le site de La Réserve.' ?>
             </p>
         </section>
 
-        <!-- Section 4: Infos pratiques -->
         <section class="content-section" style="background-color: var(--white);">
             <div class="text-content">
-                <h2>Quelques informations pratiques</h2>
+                <h2><?= $blocs['infos_pratiques_titre']['contenu_texte_publie'] ?? 'Quelques informations pratiques' ?></h2>
                 <ul style="list-style: disc; margin-left: 1.5rem;">
-                    <li><strong>Horaires :</strong> les salles sont en général disponibles en journée (et parfois en
-                        soirée selon les possibilités).</li>
-                    <li><strong>Accès :</strong> La Réserve – 22 bis rue Nationale, 62290 Nœux-les-Mines (parking à
-                        proximité).</li>
-                    <li><strong>Matériel :</strong> vérifiez avec nous ce qui est disponible concernant le matériel et ce que vous devez apporter.</li>
-                    <li><strong>Ménage & rangement :</strong> la salle doit être rendue dans un état conforme à celui
-                        d’arrivée.</li>
+                    <li><?= $blocs['infos_pratiques_li_1']['contenu_texte_publie'] ?? '<strong>Horaires :</strong> les salles sont en général disponibles en journée (et parfois en soirée selon les possibilités).' ?></li>
+                    <li><?= $blocs['infos_pratiques_li_2']['contenu_texte_publie'] ?? '<strong>Accès :</strong> La Réserve – 22 bis rue Nationale, 62290 Nœux-les-Mines (parking à proximité).' ?></li>
+                    <li><?= $blocs['infos_pratiques_li_3']['contenu_texte_publie'] ?? '<strong>Matériel :</strong> vérifiez avec nous ce qui est disponible concernant le matériel et ce que vous devez apporter.' ?></li>
+                    <li><?= $blocs['infos_pratiques_li_4']['contenu_texte_publie'] ?? '<strong>Ménage & rangement :</strong> la salle doit être rendue dans un état conforme à celui d’arrivée.' ?></li>
                 </ul>
                 
             </div>
         </section>
 
-        <!-- FORMULAIRE RESERVATION -->
-
-    <div id="modal-reservation" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(2px);">
+        <div id="modal-reservation" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(2px);">
         <div style="background: white; padding: 2rem; border-radius: 12px; max-width: 650px; width: 95%; max-height: 90vh; overflow-y: auto; position: relative; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
             
             <span id="close-modal" style="position: absolute; top: 15px; right: 20px; font-size: 1.8rem; cursor: pointer; color: #666;">&times;</span>
@@ -191,7 +200,6 @@ foreach ($rowsCreneaux as $row) {
         
         <input type="hidden" name="salle_id" id="salle_id_input" value="">
         
-        <!-- Anti-spam Honeypot : invisible pour les humains, rempli par les robots -->
         <div style="display:none;">
             <label>Ne pas remplir ce champ si vous êtes humain :</label>
             <input type="text" name="champ_piege" value="">
