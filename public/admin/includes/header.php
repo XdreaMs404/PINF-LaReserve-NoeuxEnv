@@ -6,6 +6,10 @@ if (!defined('AUTH_INCLUDED') && !class_exists('Auth')) {
 // S'assurer que l'utilisateur est connecté et au moins lecteur
 Auth::requireRole('lecteur');
 $user = Auth::user();
+
+$isAdminSubfolder = (basename(dirname($_SERVER['SCRIPT_FILENAME'])) !== 'admin');
+$basePath = $isAdminSubfolder ? '..' : '.';
+$rootPath = $isAdminSubfolder ? '../..' : '..';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -53,18 +57,19 @@ $user = Auth::user();
 
 <div class="admin-navbar">
     <div>
-        <a href="/admin/index.php">🏠 Accueil</a>
-        <a href="/admin/cms/index.php">📄 CMS / Pages</a>
-        <a href="/admin/medias/index.php">🖼️ Médias</a>
-        <a href="/admin/salles/index.php">📅 Salles</a>
+        <a href="<?= $basePath ?>/index.php">🏠 Accueil</a>
+        <a href="<?= $basePath ?>/cms/index.php">📄 CMS / Pages</a>
+        <a href="<?= $basePath ?>/medias/index.php">🖼️ Médias</a>
+        <a href="<?= $basePath ?>/salles/index.php">📅 Salles</a>
         <?php if (Auth::hasRole('administrateur')): ?>
-            <a href="/admin/cms/validation.php" style="color: #fcd34d;">⚠️ À Valider</a>
-            <a href="/admin/utilisateurs/index.php">👥 Utilisateurs</a>
+            <a href="<?= $basePath ?>/cms/validation.php" style="color: #fcd34d;">⚠️ À Valider</a>
+            <a href="<?= $basePath ?>/parametres/index.php">⚙️ Paramètres</a>
+            <a href="<?= $basePath ?>/utilisateurs/index.php">👥 Utilisateurs</a>
         <?php endif; ?>
     </div>
     <div class="admin-user">
         <?= htmlspecialchars($user['email'] ?? '') ?> (<?= htmlspecialchars($user['role'] ?? '') ?>)
-        <a href="/logout.php">Déconnexion</a>
+        <a href="<?= $rootPath ?>/logout.php">Déconnexion</a>
     </div>
 </div>
 

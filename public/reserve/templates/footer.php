@@ -15,8 +15,8 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php") {
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Tél : 03 21 66 37 74</p>
-                <p>Email : contact@noeuxenvironnement.fr </p>
+                <p>Tél : <?= htmlspecialchars(\Services\Parametre::get('telephone', 2)) ?></p>
+                <p>Email : <?= htmlspecialchars(\Services\Parametre::get('email_officiel', 2)) ?> </p>
             </div>
             <div class="footer-section">
                 <h3>Liens Utiles</h3>

@@ -50,6 +50,13 @@ require_once __DIR__ . '/../includes/header.php';
                     <td>/<?= htmlspecialchars($page['identifiant_url']) ?></td>
                     <td>
                         <a href="editer.php?id=<?= $page['id'] ?>" class="btn-edit">✏️ Éditer le contenu</a>
+                        <?php if (Auth::hasRole('administrateur')): ?>
+                        <form action="supprimer.php" method="POST" style="display:inline;" onsubmit="return confirm('Attention ! Cela supprimera la page ET tout son contenu. Continuer ?');">
+                            <input type="hidden" name="id" value="<?= $page['id'] ?>">
+                            <input type="hidden" name="csrf_token" value="<?= Csrf::token() ?>">
+                            <button type="submit" class="btn-danger" style="border:none; cursor:pointer;" title="Supprimer">🗑️</button>
+                        </form>
+                        <?php endif; ?>
                     </td>
                 </tr>
             <?php endforeach; ?>

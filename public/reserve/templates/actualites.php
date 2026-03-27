@@ -194,7 +194,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php") {
                 <p>Pour suivre aussi les actualités de l’association Nœux Environnement (chantiers nature, projets sur
                     le
                     territoire, vie associative…), vous pouvez consulter le site principal.</p>
-                <a href="/noeux/index.php?view=actualites" class="btn btn-secondary" style="margin-top: 1rem;">Voir les actus Nœux
+                <a href="../noeux/index.php?view=actualites" class="btn btn-secondary" style="margin-top: 1rem;">Voir les actus Nœux
                     Environnement</a>
             </div>
         </section>

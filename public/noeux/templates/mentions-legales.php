@@ -22,8 +22,8 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php") {
                     22 bis Rue Nationale<br>
                     62290 Nœux-les-Mines<br>
                     France</p>
-                <p>Tél : 03 21 66 37 74<br>
-                    Email : contact@noeuxenvironnement.fr</p>
+                <p>Tél : <?= htmlspecialchars(\Services\Parametre::get('telephone', 1)) ?><br>
+                    Email : <?= htmlspecialchars(\Services\Parametre::get('email_officiel', 1)) ?></p>
 
                 <h2 style="margin-top: 2rem;">Directeur de la publication</h2>
                 <p>[Nom du Directeur]</p>

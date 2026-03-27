@@ -13,7 +13,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php") {
     <title>La Réserve - Nœux Environnement</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/images/logo_noeux_environnement.png" type="image/png">
-    <script src="/shared/config.js"></script>
+    <script src="../shared/config.js"></script>
 
     <?php if (isset($view) && $view === 'agenda'): ?>
     <script src="https://cdn.jsdelivr.net/npm/ical.js@1.5.0/build/ical.min.js"></script>

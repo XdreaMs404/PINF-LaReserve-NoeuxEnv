@@ -12,7 +12,7 @@ $user = Auth::user();
 <head>
     <meta charset="UTF-8">
     <title>Administration - La Réserve</title>
-    <link rel="stylesheet" href="/reserve/css/style.css">
+    <link rel="stylesheet" href="../reserve/css/style.css">
     <style>
         body {
             background-color: #f4f4f4;
@@ -44,18 +44,19 @@ $user = Auth::user();
                 Bienvenue,
                 <?= htmlspecialchars($user['email']) ?> (
                 <?= htmlspecialchars($user['role']) ?>) |
-                <a href="/logout.php">Déconnexion</a>
+                <a href="../logout.php">Déconnexion</a>
             </div>
         </div>
 
         <div class="content">
             <p>Ceci est l'espace d'administration protégé.</p>
             <ul>
-                <li><a href="/admin/cms/index.php">Gérer les pages</a></li>
-                <li><a href="/admin/medias/index.php">Gérer les médias</a></li>
-                <li><a href="/admin/salles/index.php">Gérer les réservations de salles</a></li>
+                <li><a href="cms/index.php">Gérer les pages</a></li>
+                <li><a href="medias/index.php">Gérer les médias</a></li>
+                <li><a href="salles/index.php">Gérer les réservations de salles</a></li>
                 <?php if (Auth::hasRole('administrateur')): ?>
-                    <li><a href="/admin/utilisateurs/index.php">Gérer les utilisateurs</a></li>
+                    <li><a href="parametres/index.php">Gérer les paramètres globaux (Téléphone, Adresse, Réseaux)</a></li>
+                    <li><a href="utilisateurs/index.php">Gérer les utilisateurs</a></li>
                 <?php endif; ?>
             </ul>
         </div>

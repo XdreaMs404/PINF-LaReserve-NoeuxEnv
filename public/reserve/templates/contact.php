@@ -317,9 +317,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <p><?= $blocs['contact_coordonnees_intro']['contenu_texte_publie'] ?? 'Vous pouvez aussi nous joindre :' ?></p>
                     <ul style="list-style: none; margin-top: 1rem;">
-                        <li style="margin-bottom: 0.5rem;">📞 <strong>Par téléphone :</strong> <?= $blocs['contact_coordonnees_tel']['contenu_texte_publie'] ?? '03 21 66 37 74' ?>
+                        <li style="margin-bottom: 0.5rem;">📞 <strong>Par téléphone :</strong> <?= $blocs['contact_coordonnees_tel']['contenu_texte_publie'] ?? \Services\Parametre::get('telephone', 2) ?>
                         </li>
-                        <li style="margin-bottom: 0.5rem;">📧 <strong>Par mail :</strong> <?= $blocs['contact_coordonnees_mail']['contenu_texte_publie'] ?? 'contact@noeuxenvironnement.fr' ?></li>
+                        <li style="margin-bottom: 0.5rem;">📧 <strong>Par mail :</strong> <?= $blocs['contact_coordonnees_mail']['contenu_texte_publie'] ?? \Services\Parametre::get('email_officiel', 2) ?></li>
                         <li style="margin-bottom: 0.5rem;">📍 <strong>Sur place :</strong><br>
                             <?= $blocs['contact_coordonnees_adresse']['contenu_texte_publie'] ?? 'La Réserve – 22 bis rue Nationale<br>62290 Nœux-les-Mines' ?></li>
                     </ul>

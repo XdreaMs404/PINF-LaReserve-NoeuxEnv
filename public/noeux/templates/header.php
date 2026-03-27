@@ -13,7 +13,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
     <title>Noeux Environnement</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/images/logo_noeux_environnement.png" type="image/png">
-    <script src="/shared/config.js"></script>
+    <script src="../shared/config.js"></script>
 </head>
 <body>
 

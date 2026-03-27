@@ -63,7 +63,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
             color: #666;
         }
     </style>
-    <script src="/shared/config.js"></script>
+    <script src="shared/config.js"></script>
 </head>
 
 <body>

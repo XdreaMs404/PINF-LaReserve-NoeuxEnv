@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - La Réserve</title>
     <!-- Réutilisation du CSS existant (chemin relatif adapté si besoin) -->
-    <link rel="stylesheet" href="/reserve/css/style.css">
+    <link rel="stylesheet" href="reserve/css/style.css">
     <style>
         /* Styles spécifiques pour le login si CSS existant ne suffit pas */
         .login-container {

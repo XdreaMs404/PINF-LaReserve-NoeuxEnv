@@ -34,7 +34,7 @@ http_response_code(403);
 <body>
     <h1>403 - Accès Interdit</h1>
     <p>Vous n'avez pas les droits suffisants pour accéder à cette page.</p>
-    <p><a href="/noeux/index.php?view=accueil">Retour à l'accueil</a> | <a href="/logout.php">Se déconnecter</a></p>
+    <p><a href="../../noeux/index.php?view=accueil">Retour à l'accueil</a> | <a href="../../logout.php">Se déconnecter</a></p>
 </body>
 
 </html>

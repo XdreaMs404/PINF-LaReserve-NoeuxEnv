@@ -97,7 +97,7 @@ foreach ($resultats as $row) {
         <?php foreach ($salles as $salle): ?>
             <div class="card" style="display: flex; flex-direction: column;">
                 <?php if (!empty($salle['chemin_fichier'])): ?>
-                    <img src="/<?= htmlspecialchars($salle['chemin_fichier']) ?>" style="width:100%; height:200px; object-fit:cover; border-radius:8px 8px 0 0; margin:-1.5rem -1.5rem 1rem -1.5rem; max-width: calc(100% + 3rem);" alt="Photo de la salle">
+                    <img src="../<?= htmlspecialchars($salle['chemin_fichier']) ?>" style="width:100%; height:200px; object-fit:cover; border-radius:8px 8px 0 0; margin:-1.5rem -1.5rem 1rem -1.5rem; max-width: calc(100% + 3rem);" alt="Photo de la salle">
                 <?php endif; ?>
                 <h3 style="margin-top:0;"><?= htmlspecialchars(stripslashes($salle['nom'])) ?></h3>
                 <?php if ($salle['capacite']): ?>

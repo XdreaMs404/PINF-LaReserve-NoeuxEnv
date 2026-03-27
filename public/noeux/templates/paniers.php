@@ -259,8 +259,8 @@ foreach ($resultats as $row) {
             style="background-color: var(--light-gray); padding: 3rem; border-radius: 8px; text-align: center;">
             <h2><?= $blocs['paniers_h2_8']['contenu_texte_publie'] ?? 'Une question avant de commander ?' ?></h2>
             <p style="margin-bottom: 2rem;"><?= $blocs['paniers_p_28']['contenu_texte_publie'] ?? 'Si vous avez besoin d’un renseignement avant de passer commande (allergie, organisation, panier solidaire, commande groupée…), vous pouvez nous contacter :' ?></p>
-            <p><strong>Par mail :</strong> <?= $blocs['paniers_p_29']['contenu_texte_publie'] ?? 'contact@noeuxenvironnement.fr' ?></p>
-            <p><strong>Par téléphone :</strong> <?= $blocs['paniers_p_30']['contenu_texte_publie'] ?? '03 21 66 37 74' ?></p>
+            <p><strong>Par mail :</strong> <?= $blocs['paniers_p_29']['contenu_texte_publie'] ?? \Services\Parametre::get('email_officiel', 1) ?></p>
+            <p><strong>Par téléphone :</strong> <?= $blocs['paniers_p_30']['contenu_texte_publie'] ?? \Services\Parametre::get('telephone', 1) ?></p>
             <a href="<?= htmlspecialchars($blocs['paniers_a_5']['url_publie'] ?? 'index.php?view=contact') ?>" class="btn btn-primary" style="margin-top: 1rem;">
                 <?= $blocs['paniers_a_5']['contenu_texte_publie'] ?? 'Nous contacter' ?>
             </a>

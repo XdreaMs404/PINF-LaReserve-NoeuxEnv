@@ -62,7 +62,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php") {
                 <h2>Paniers de légumes & Panier Solidaire</h2>
                 <p>Les paniers de légumes bio de saison sont préparés par les Maraîchers de Nœux Environnement. Il
                     existe aussi un panier solidaire à tarif réduit sous conditions.</p>
-                <a href="/noeux/index.php?view=paniers" class="btn btn-primary" style="margin-top: 1rem;">En savoir plus sur les
+                <a href="../noeux/index.php?view=paniers" class="btn btn-primary" style="margin-top: 1rem;">En savoir plus sur les
                     paniers</a>
             </div>
         </section>

@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Ajouter un média - Administration</title>
-    <link rel="stylesheet" href="/reserve/css/style.css">
+    <link rel="stylesheet" href="../../reserve/css/style.css">
     <style>
         .form-container {
             max-width: 600px;

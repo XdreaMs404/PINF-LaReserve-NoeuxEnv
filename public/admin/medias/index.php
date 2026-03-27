@@ -60,7 +60,7 @@ require_once __DIR__ . '/../includes/header.php';
         <div style="display:flex; justify-content:space-between; align-items:center;">
             <h1>Médiathèque</h1>
             <?php if ($selectForPage): ?>
-                <a href="/admin/pages/editer.php?id=<?= $selectForPage ?>#bloc-<?= $selectBlocId ?>" class="btn btn-secondary">Annuler la sélection</a>
+                <a href="../cms/editer.php?id=<?= $selectForPage ?>#bloc-<?= $selectBlocId ?>" class="btn btn-secondary">Annuler la sélection</a>
             <?php else: ?>
                 <a href="../index.php" class="btn btn-secondary">Retour Dashboard</a>
             <?php endif; ?>
@@ -114,9 +114,9 @@ require_once __DIR__ . '/../includes/header.php';
                 }
                 ?>
                 <div class="media-item">
-                    <a href="/<?= htmlspecialchars($displayPath) ?>" target="_blank" title="Voir en grand">
-                        <?php if ($displayPath): ?>
-                            <img src="/<?= htmlspecialchars($displayPath) ?>" alt="<?= htmlspecialchars($altText) ?>">
+                    <a href="../../<?= htmlspecialchars($displayPath) ?>" target="_blank" title="Voir en grand">
+                        <?php if (strpos(mime_content_type(__DIR__ . '/../../' . $displayPath), 'image') !== false): ?>
+                            <img src="../../<?= htmlspecialchars($displayPath) ?>" alt="<?= htmlspecialchars($altText) ?>">
                         <?php else: ?>
                             <div
                                 style="height:150px; display:flex; align-items:center; justify-content:center; background:#f0f0f0; color:#999;">
@@ -129,7 +129,7 @@ require_once __DIR__ . '/../includes/header.php';
                     </div>
                     <?php if ($selectForPage && $selectBlocId): ?>
                         <div class="media-actions">
-                            <form action="/admin/pages/update_image_bloc.php" method="POST" style="margin:0;">
+                            <form action="../cms/update_image_bloc.php" method="POST" style="margin:0;">
                                 <input type="hidden" name="csrf_token" value="<?= Csrf::token() ?>">
                                 <input type="hidden" name="page_id" value="<?= $selectForPage ?>">
                                 <input type="hidden" name="bloc_id" value="<?= $selectBlocId ?>">

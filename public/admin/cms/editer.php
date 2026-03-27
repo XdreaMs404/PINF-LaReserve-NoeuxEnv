@@ -103,13 +103,13 @@ require_once __DIR__ . '/../includes/header.php';
                             <?php 
                             $imgSrc = strpos($currentMedia['chemin_fichier'], 'assets/') === 0 ? ($currentMedia['site_id'] == 1 ? 'noeux/' : 'reserve/') . $currentMedia['chemin_fichier'] : $currentMedia['chemin_fichier']; 
                             ?>
-                            <img src="/<?= htmlspecialchars($imgSrc) ?>" style="max-height: 80px; max-width: 120px; object-fit: cover; border-radius: 4px;">
+                            <img src="../../<?= htmlspecialchars($imgSrc) ?>" style="max-height: 80px; max-width: 120px; object-fit: cover; border-radius: 4px;">
                             <div style="flex-grow: 1;"><strong><?= htmlspecialchars($currentMedia['nom_original'] ?: $currentMedia['chemin_fichier']) ?></strong></div>
                         <?php else: ?>
                             <div style="flex-grow: 1; color: #666; font-style: italic;">Aucune image sélectionnée pour le moment.</div>
                         <?php endif; ?>
                         
-                        <a href="/admin/medias/index.php?select_for_page=<?= $page['id'] ?>&bloc_id=<?= $bloc['id'] ?>&site_id=<?= $page['site_id'] ?>" class="btn btn-secondary">🖼️ Choisir depuis la médiathèque</a>
+                        <a href="../medias/index.php?select_for_page=<?= $page['id'] ?>&bloc_id=<?= $bloc['id'] ?>&site_id=<?= $page['site_id'] ?>" class="btn btn-secondary">🖼️ Choisir depuis la médiathèque</a>
                     </div>
                     <input type="hidden" name="blocs[<?= $bloc['id'] ?>][media_id]" value="<?= htmlspecialchars($mediaIdValue) ?>">
                     <?php endif; ?>
