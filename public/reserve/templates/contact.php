@@ -312,9 +312,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div
                     style="background-color: var(--white); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow);">
                     <h2><?= $blocs['contact_coordonnees_titre']['contenu_texte_publie'] ?? 'Nos coordonnées' ?></h2>
-                    <div style="width: 100%; height: 250px; margin-top: 1rem; border-radius: 4px; overflow: hidden; box-shadow: var(--shadow);">
-                        <?= $blocs['contact_iframe_map']['contenu_texte_publie'] ?? '<iframe width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=22%20bis%20Rue%20Nationale,%2062290%20Noeux-les-Mines&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>' ?>
+                    <!-- OpenStreetMap avec Leaflet -->
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+                    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+                    <div id="map-reserve" style="width: 100%; height: 250px; margin-top: 1rem; border-radius: 4px; overflow: hidden; box-shadow: var(--shadow); z-index: 1;">
+                        <?= $blocs['contact_iframe_map']['contenu_texte_publie'] ?? '' ?>
                     </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            // Coordonnées pour 22 bis Rue Nationale, Noeux-les-Mines
+                            var lat = 50.4794;
+                            var lon = 2.6667;
+                            var map = L.map('map-reserve').setView([lat, lon], 15);
+
+                            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors'
+                            }).addTo(map);
+
+                            L.marker([lat, lon]).addTo(map)
+                                .bindPopup('<b>La Réserve / Nœux Environnement</b><br>22 bis Rue Nationale, 62290 Noeux-les-Mines')
+                                .openPopup();
+                        });
+                    </script>
                     <p><?= $blocs['contact_coordonnees_intro']['contenu_texte_publie'] ?? 'Vous pouvez aussi nous joindre :' ?></p>
                     <ul style="list-style: none; margin-top: 1rem;">
                         <li style="margin-bottom: 0.5rem;">📞 <strong>Par téléphone :</strong> <?= $blocs['contact_coordonnees_tel']['contenu_texte_publie'] ?? \Services\Parametre::get('telephone', 2) ?>

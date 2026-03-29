@@ -9,3 +9,13 @@ vendor/
 node_modules/
 *.swp
 .DS_Store
+
+# Scripts de diagnostic/correction temporaires (à ne jamais commiter)
+public/*fix*.php
+public/*diag*.php
+public/*debug*.php
+public/*dump*.php
+public/*check_*.php
+public/*test_*.php
+public/*verify*.php
+*.txt

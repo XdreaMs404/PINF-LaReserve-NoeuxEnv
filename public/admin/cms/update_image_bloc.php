@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute([$media_id, $userId, $bloc_id, $page_id]);
         
         // On redirige vers la page d'édition, ancré spécifiquement sur le bloc modifié
-        header("Location: /admin/pages/editer.php?id={$page_id}&success=1#bloc-{$bloc_id}");
+        header("Location: editer.php?id={$page_id}&success=1#bloc-{$bloc_id}");
         exit;
     }
 }

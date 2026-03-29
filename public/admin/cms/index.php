@@ -24,7 +24,10 @@ require_once __DIR__ . '/../includes/header.php';
 ?>
     <div style="display:flex; justify-content:space-between; align-items:center;">
         <h1>Gérer les pages</h1>
-        <a href="../index.php" class="btn btn-secondary">Retour Dashboard</a>
+        <div>
+            <a href="ajouter.php" class="btn btn-primary" style="margin-right: 10px; text-decoration: none; padding: 8px 15px; border-radius: 4px; background: #2E7D32; color: white;">➕ Créer une nouvelle page</a>
+            <a href="../../index.php" class="btn btn-secondary" style="text-decoration: none; padding: 8px 15px; border-radius: 4px; background: #6c757d; color: white;">Retour Dashboard</a>
+        </div>
     </div>
 
     <?php if (isset($_GET['msg'])): ?>
